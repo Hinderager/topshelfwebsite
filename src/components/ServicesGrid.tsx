@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Trash2, Truck, Hammer, ArrowRight } from 'lucide-react'
+import { Trash2, Truck, Hammer, Home, ArrowRight } from 'lucide-react'
 
 const services = [
   {
@@ -21,28 +21,45 @@ const services = [
     description: 'Safe and efficient demolition services. From sheds to complete structures, we handle it all.',
     link: '/services/demolition',
   },
+  {
+    icon: Home,
+    title: 'Cleanouts',
+    description: 'Complete property cleanout services for estates, foreclosures, and hoarding situations. Compassionate and thorough.',
+    link: '/services/cleanouts',
+  },
 ]
 
 export function ServicesGrid() {
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-slate-50">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-gradient-to-b from-blue-50/30 to-slate-100/50 relative overflow-hidden">
+      {/* Gradient dot pattern background with varying sizes */}
+      <div className="absolute inset-0" style={{
+        backgroundImage: `radial-gradient(circle, #1e3a5f 2.5px, transparent 2.5px)`,
+        backgroundSize: '20px 20px',
+        maskImage: `radial-gradient(ellipse 80% 60% at 0% 0%, black, transparent 50%), radial-gradient(ellipse 80% 60% at 100% 100%, black, transparent 50%)`,
+        WebkitMaskImage: `radial-gradient(ellipse 80% 60% at 0% 0%, black, transparent 50%), radial-gradient(ellipse 80% 60% at 100% 100%, black, transparent 50%)`,
+        maskComposite: 'add',
+        WebkitMaskComposite: 'source-over',
+        opacity: 0.2
+      }} />
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#1e3a5f] mb-4">
             Our Services
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Comprehensive junk removal, moving, and demolition solutions for the Treasure Valley area
+            Comprehensive junk removal, moving, and demolition solutions for the Boise area
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => {
             const Icon = service.icon
             return (
               <Card
                 key={index}
-                className="group hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border-2 border-transparent hover:border-[#4a90e2]"
+                className="group hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border-2 border-transparent hover:border-[#4a90e2] flex flex-col"
               >
                 <CardHeader className="text-center">
                   <div className="mx-auto mb-4 w-20 h-20 bg-gradient-to-br from-[#4a90e2] to-[#1e3a5f] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -52,13 +69,13 @@ export function ServicesGrid() {
                     {service.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="text-center">
-                  <CardDescription className="text-base text-gray-600 mb-6">
+                <CardContent className="text-center flex flex-col flex-grow">
+                  <CardDescription className="text-base text-gray-600 mb-6 flex-grow">
                     {service.description}
                   </CardDescription>
                   <Link
                     href={service.link}
-                    className="inline-flex items-center gap-2 text-[#ff6b35] font-semibold hover:gap-3 transition-all duration-300"
+                    className="inline-flex items-center gap-2 text-[#ff6b35] font-semibold hover:gap-3 transition-all duration-300 justify-center mt-auto"
                   >
                     Learn More
                     <ArrowRight className="h-4 w-4" />

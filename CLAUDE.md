@@ -42,24 +42,28 @@ src/
 │   └── globals.css   # Global styles and Tailwind directives
 ├── components/
 │   └── ui/           # shadcn/ui components (button, card, badge, etc.)
-├── assets/
 ├── lib/
 │   └── utils.ts      # Utility functions (cn() for class merging)
-├── images/
 └── pages/
     ├── services/
     └── cities/
 
-
-
+public/
+├── assets/           # Static assets (logos, etc.)
+│   └── Logos/
+├── images/           # Organized by service type
+│   ├── best-of-all/  # Hero and top-tier images
+│   ├── junk-removal/ # Junk removal service images
+│   │   ├── appliance-removal/
+│   │   ├── furniture-removal/
+│   │   ├── exercise-equipment/
+│   │   └── ... (16 subcategories)
+│   ├── demolition/   # Demolition service images
+│   └── moving/       # Moving service images
+│       ├── residential-moves/
+│       └── commercial-moves/
+└── logos/            # Brand logos
 ```
-
-
-├──
-
-└──
-│
-─
 
 
 ### Import Aliases

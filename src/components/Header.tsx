@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu, X, ChevronDown } from 'lucide-react'
+import { Menu, X, ChevronDown, Phone } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const junkRemovalItems = [
@@ -41,6 +41,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+  const [closeTimeout, setCloseTimeout] = useState<NodeJS.Timeout | null>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,31 +51,65 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const handleMouseEnter = (dropdown: string) => {
+    if (closeTimeout) {
+      clearTimeout(closeTimeout)
+      setCloseTimeout(null)
+    }
+    setActiveDropdown(dropdown)
+  }
+
+  const handleMouseLeave = () => {
+    const timeout = setTimeout(() => {
+      setActiveDropdown(null)
+    }, 300)
+    setCloseTimeout(timeout)
+  }
+
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 bg-white transition-shadow duration-300 ${isScrolled ? 'shadow-md' : ''}`}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+    <header className="fixed top-0 left-0 right-0 z-50 pt-3 px-4">
+      <div className="container mx-auto max-w-screen-2xl">
+        <div className="bg-gradient-to-b from-blue-50/95 to-slate-50/95 rounded-lg border-2 border-[#1e3a5f] shadow-xl px-8 flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/logos/Asset 5@4x.png"
+              src="/logos/Asset 5@4x-white.png"
               alt="Top Shelf Moving and Junk Removal"
               width={200}
               height={60}
               priority
-              className="h-12 w-auto"
+              className="hidden xl:block h-auto w-auto max-h-12"
+              style={{ objectFit: 'contain' }}
+            />
+            <Image
+              src="/logos/full-white.png"
+              alt="Top Shelf Moving and Junk Removal"
+              width={60}
+              height={60}
+              priority
+              className="hidden lg:block xl:hidden h-auto w-auto max-h-12"
+              style={{ objectFit: 'contain' }}
+            />
+            <Image
+              src="/logos/full-white.png"
+              alt="Top Shelf Moving and Junk Removal"
+              width={60}
+              height={60}
+              priority
+              className="lg:hidden h-auto w-auto max-h-12"
+              style={{ objectFit: 'contain' }}
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-4 xl:space-x-6">
             {/* Junk Removal Dropdown */}
             <div
               className="relative group"
-              onMouseEnter={() => setActiveDropdown('junk')}
-              onMouseLeave={() => setActiveDropdown(null)}
+              onMouseEnter={() => handleMouseEnter('junk')}
+              onMouseLeave={handleMouseLeave}
             >
-              <button className="flex items-center space-x-1 text-gray-700 hover:text-[#1e3a5f] transition-colors font-bold">
+              <button className="flex items-center space-x-1 text-gray-700 hover:text-[#1e3a5f] transition-colors font-bold text-sm xl:text-base whitespace-nowrap">
                 <span>Junk Removal</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
@@ -101,10 +136,10 @@ export function Header() {
             {/* Moving Dropdown */}
             <div
               className="relative group"
-              onMouseEnter={() => setActiveDropdown('moving')}
-              onMouseLeave={() => setActiveDropdown(null)}
+              onMouseEnter={() => handleMouseEnter('moving')}
+              onMouseLeave={handleMouseLeave}
             >
-              <button className="flex items-center space-x-1 text-gray-700 hover:text-[#1e3a5f] transition-colors font-bold">
+              <button className="flex items-center space-x-1 text-gray-700 hover:text-[#1e3a5f] transition-colors font-bold text-sm xl:text-base whitespace-nowrap">
                 <span>Moving</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
@@ -131,10 +166,10 @@ export function Header() {
             {/* Demolition Dropdown */}
             <div
               className="relative group"
-              onMouseEnter={() => setActiveDropdown('demolition')}
-              onMouseLeave={() => setActiveDropdown(null)}
+              onMouseEnter={() => handleMouseEnter('demolition')}
+              onMouseLeave={handleMouseLeave}
             >
-              <button className="flex items-center space-x-1 text-gray-700 hover:text-[#1e3a5f] transition-colors font-bold">
+              <button className="flex items-center space-x-1 text-gray-700 hover:text-[#1e3a5f] transition-colors font-bold text-sm xl:text-base whitespace-nowrap">
                 <span>Demolition</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
@@ -156,10 +191,10 @@ export function Header() {
             {/* Service Areas Dropdown */}
             <div
               className="relative group"
-              onMouseEnter={() => setActiveDropdown('areas')}
-              onMouseLeave={() => setActiveDropdown(null)}
+              onMouseEnter={() => handleMouseEnter('areas')}
+              onMouseLeave={handleMouseLeave}
             >
-              <button className="flex items-center space-x-1 text-gray-700 hover:text-[#1e3a5f] transition-colors font-bold">
+              <button className="flex items-center space-x-1 text-gray-700 hover:text-[#1e3a5f] transition-colors font-bold text-sm xl:text-base whitespace-nowrap">
                 <span>Service Areas</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
@@ -178,17 +213,17 @@ export function Header() {
               )}
             </div>
 
-            <Link href="/contact" className="text-gray-700 hover:text-[#1e3a5f] transition-colors font-bold">
+            <Link href="/contact" className="text-gray-700 hover:text-[#1e3a5f] transition-colors font-bold text-sm xl:text-base whitespace-nowrap">
               Contact
             </Link>
 
             {/* Resources Dropdown */}
             <div
               className="relative group"
-              onMouseEnter={() => setActiveDropdown('resources')}
-              onMouseLeave={() => setActiveDropdown(null)}
+              onMouseEnter={() => handleMouseEnter('resources')}
+              onMouseLeave={handleMouseLeave}
             >
-              <button className="flex items-center space-x-1 text-gray-700 hover:text-[#1e3a5f] transition-colors font-bold">
+              <button className="flex items-center space-x-1 text-gray-700 hover:text-[#1e3a5f] transition-colors font-bold text-sm xl:text-base whitespace-nowrap">
                 <span>Resources</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
@@ -208,24 +243,25 @@ export function Header() {
             </div>
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center">
-            <Button asChild size="lg" className="bg-ub-yellow hover:bg-ub-yellow/90 text-black font-bold text-lg">
-              <a href="tel:6121234567">(612) 123-4567</a>
-            </Button>
+          {/* Desktop Phone */}
+          <div className="hidden lg:flex items-center gap-2">
+            <a href="tel:2085932877" className="flex items-center gap-1.5 text-evening-blue hover:text-evening-blue/80 transition-colors font-bold text-lg xl:text-xl whitespace-nowrap">
+              <Phone className="h-5 w-5 xl:h-6 xl:w-6" />
+              <span>(208) 593-2877</span>
+            </a>
           </div>
 
-          {/* Mobile CTA Button */}
-          <div className="lg:hidden flex items-center gap-2">
+          {/* Mobile Icons */}
+          <div className="lg:hidden flex items-center gap-4">
+            <a href="tel:2085932877" className="text-gray-700 hover:text-polar-blue transition-colors">
+              <Phone className="h-6 w-6" />
+            </a>
             <button
-              className="text-gray-700"
+              className="text-gray-700 hover:text-polar-blue transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
-            <Button asChild className="bg-ub-yellow hover:bg-ub-yellow/90 text-black font-bold text-base px-6 py-3">
-              <a href="tel:6121234567">Call Now</a>
-            </Button>
           </div>
         </div>
 
