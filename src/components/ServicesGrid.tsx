@@ -46,7 +46,7 @@ export function ServicesGrid() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-[#1e3a5f] mb-4 uppercase drop-shadow-lg">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-[#1e3a5f] mb-4 uppercase" style={{textShadow: '2px 2px 3px rgba(0,0,0,0.3), 1px 1px 2px rgba(0,0,0,0.2)'}}>
             Our Services
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -60,7 +60,10 @@ export function ServicesGrid() {
             return (
               <Card
                 key={index}
-                className="group hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border-2 border-transparent hover:border-[#4a90e2] flex flex-col"
+                className="group shadow-2xl hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] hover:-translate-y-2 transition-all duration-300 border-2 border-transparent hover:border-[#4a90e2] flex flex-col"
+                style={{
+                  boxShadow: '0 10px 30px rgba(30, 58, 95, 0.3), 0 5px 15px rgba(30, 58, 95, 0.2)'
+                }}
               >
                 <CardHeader className="text-center">
                   <div className="mx-auto mb-4 w-20 h-20 bg-gradient-to-br from-[#4a90e2] to-[#1e3a5f] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">

@@ -86,10 +86,10 @@ export function ProcessSection() {
               Book Now
             </a>
             <a
-              href="tel:6121234567"
+              href="tel:2085932877"
               className="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-semibold rounded-lg border-2 border-white/30 transition-all duration-300"
             >
-              (612) 123-4567
+              (208) 593-2877
             </a>
           </div>
         </div>

@@ -120,7 +120,7 @@ export function PricingSection() {
             variant="outline"
             className="border-2 border-polar-blue text-polar-blue hover:bg-polar-blue hover:text-white font-bold"
           >
-            <a href="tel:6121234567">Call for Free Estimate: (612) 123-4567</a>
+            <a href="tel:2085932877">Call for Free Estimate: (208) 593-2877</a>
           </Button>
         </div>
       </div>

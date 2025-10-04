@@ -41,7 +41,7 @@ export function ServicesShowcase() {
           <p className="text-[#4a90e2] uppercase tracking-wider text-sm font-semibold mb-2">
             Solutions Above The Rest
           </p>
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-[#1e3a5f] mb-4 uppercase drop-shadow-lg">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-[#1e3a5f] mb-4 uppercase" style={{textShadow: '2px 2px 3px rgba(0,0,0,0.3), 1px 1px 2px rgba(0,0,0,0.2)'}}>
             Services We Offer The Treasure Valley
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto">

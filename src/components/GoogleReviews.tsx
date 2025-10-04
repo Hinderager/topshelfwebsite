@@ -109,7 +109,7 @@ export function GoogleReviews() {
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-[#1e3a5f] mb-8 uppercase drop-shadow-lg">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-[#1e3a5f] mb-8 uppercase" style={{textShadow: '2px 2px 3px rgba(0,0,0,0.3), 1px 1px 2px rgba(0,0,0,0.2)'}}>
             What Our Customers Say
           </h2>
 

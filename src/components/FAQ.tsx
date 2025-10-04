@@ -49,7 +49,7 @@ export function FAQ() {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         {/* Title */}
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-center mb-12 drop-shadow-lg uppercase">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-center mb-12 uppercase" style={{textShadow: '2px 2px 3px rgba(0,0,0,0.3), 1px 1px 2px rgba(0,0,0,0.2)'}}>
           <span className="text-[#1e3a5f]">Frequently Asked Questions</span>
         </h2>
 
