@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
 import { Trash2, Truck, Hammer, Home, ArrowRight } from 'lucide-react'
 
 const services = [
@@ -45,7 +46,7 @@ export function ServicesGrid() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1e3a5f] mb-4">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-[#1e3a5f] mb-4 uppercase drop-shadow-lg">
             Our Services
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -84,6 +85,20 @@ export function ServicesGrid() {
               </Card>
             )
           })}
+        </div>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+          <Button asChild size="lg" className="bg-ub-yellow hover:bg-ub-yellow/90 text-black font-bold text-lg px-10 py-6 rounded-lg uppercase border-4 border-ub-yellow">
+            <Link href="/quote">Book Now</Link>
+          </Button>
+          <Button
+            asChild
+            size="lg"
+            className="bg-white hover:bg-white/90 text-black font-bold text-lg px-10 py-6 rounded-lg border-4 border-ub-yellow uppercase"
+          >
+            <a href="tel:2085932877">Call Now</a>
+          </Button>
         </div>
       </div>
     </section>

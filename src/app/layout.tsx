@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
+import { Montserrat, Oswald } from 'next/font/google'
 import './globals.css'
 
 // Harmonia Sans is not available on Google Fonts, using Montserrat as closest alternative
@@ -8,6 +8,14 @@ const montserrat = Montserrat({
   subsets: ['latin'],
   variable: '--font-montserrat',
   weight: ['400', '600', '700', '900'],
+  display: 'swap',
+})
+
+// Oswald for tall, condensed headers
+const oswald = Oswald({
+  subsets: ['latin'],
+  variable: '--font-oswald',
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
 })
 
@@ -57,8 +65,14 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         <StructuredData />
+        <link
+          rel="preload"
+          href="/images/best-of-all/hero.webp"
+          as="image"
+          type="image/webp"
+        />
       </head>
-      <body className={`${montserrat.variable} font-sans antialiased`}>
+      <body className={`${montserrat.variable} ${oswald.variable} font-sans antialiased`}>
         {children}
         <SpeedInsights />
       </body>

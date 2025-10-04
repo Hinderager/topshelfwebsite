@@ -1,7 +1,9 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { Card, CardContent } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react'
 
 interface Review {
@@ -92,16 +94,27 @@ export function GoogleReviews() {
   const totalReviews = reviewsData.totalReviews
 
   return (
-    <section className="py-20 bg-gradient-to-b from-blue-50/30 to-slate-100/50">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-gradient-to-b from-blue-50/30 to-slate-100/50 relative overflow-hidden">
+      {/* Gradient dot pattern background */}
+      <div className="absolute inset-0" style={{
+        backgroundImage: `radial-gradient(circle, #1e3a5f 3px, transparent 3px)`,
+        backgroundSize: '16px 16px',
+        maskImage: `radial-gradient(ellipse 85% 65% at 0% 0%, black, transparent 60%), radial-gradient(ellipse 85% 65% at 100% 100%, black, transparent 60%)`,
+        WebkitMaskImage: `radial-gradient(ellipse 85% 65% at 0% 0%, black, transparent 60%), radial-gradient(ellipse 85% 65% at 100% 100%, black, transparent 60%)`,
+        maskComposite: 'add',
+        WebkitMaskComposite: 'source-over',
+        opacity: 0.2
+      }} />
+
+      <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1e3a5f] mb-8">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-[#1e3a5f] mb-8 uppercase drop-shadow-lg">
             What Our Customers Say
           </h2>
 
           {/* Google Reviews Badge */}
-          <div className="inline-block bg-slate-50 rounded-2xl px-8 py-6 shadow-md">
+          <div className="inline-block bg-white rounded-2xl px-8 py-6 shadow-md">
             <div className="flex items-center gap-3 mb-3">
               <span className="text-4xl font-bold">
                 <span className="text-[#4285f4]">G</span>
@@ -129,7 +142,7 @@ export function GoogleReviews() {
         <div className="relative">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {visibleReviews.map((review) => (
-              <Card key={review.time} className="bg-slate-50 border-0 shadow-lg hover:shadow-xl transition-shadow">
+              <Card key={review.time} className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow">
                 <CardContent className="p-6">
                   {/* Reviewer Info */}
                   <div className="flex items-start gap-3 mb-4">
@@ -241,6 +254,20 @@ export function GoogleReviews() {
             Read all {totalReviews} reviews on Google
             <ChevronRight className="w-5 h-5" />
           </a>
+        </div>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+          <Button asChild size="lg" className="bg-ub-yellow hover:bg-ub-yellow/90 text-black font-bold text-lg px-10 py-6 rounded-lg uppercase border-4 border-ub-yellow">
+            <Link href="/quote">Book Now</Link>
+          </Button>
+          <Button
+            asChild
+            size="lg"
+            className="bg-white hover:bg-white/90 text-black font-bold text-lg px-10 py-6 rounded-lg border-4 border-ub-yellow uppercase"
+          >
+            <a href="tel:2085932877">Call Now</a>
+          </Button>
         </div>
       </div>
     </section>

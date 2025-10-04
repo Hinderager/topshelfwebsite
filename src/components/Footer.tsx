@@ -111,10 +111,10 @@ export function Footer() {
                 <Phone className="h-5 w-5 text-[#ff6b35] flex-shrink-0 mt-1" />
                 <div>
                   <a
-                    href="tel:6121234567"
+                    href="tel:2085932877"
                     className="text-white/80 hover:text-white transition-colors font-semibold"
                   >
-                    (612) 123-4567
+                    (208) 593-2877
                   </a>
                 </div>
               </li>
@@ -122,10 +122,10 @@ export function Footer() {
                 <Mail className="h-5 w-5 text-[#ff6b35] flex-shrink-0 mt-1" />
                 <div>
                   <a
-                    href="mailto:info@topshelfmn.com"
+                    href="mailto:info@topshelfpros.com"
                     className="text-white/80 hover:text-white transition-colors"
                   >
-                    info@topshelfmn.com
+                    info@topshelfpros.com
                   </a>
                 </div>
               </li>
@@ -133,8 +133,8 @@ export function Footer() {
                 <MapPin className="h-5 w-5 text-[#ff6b35] flex-shrink-0 mt-1" />
                 <div>
                   <p className="text-white/80">
-                    Boise, ID<br />
-                    Treasure Valley Area
+                    1755 N Westgate Dr, Suite 110<br />
+                    Boise, ID 83704
                   </p>
                 </div>
               </li>
@@ -142,9 +142,8 @@ export function Footer() {
                 <Clock className="h-5 w-5 text-[#ff6b35] flex-shrink-0 mt-1" />
                 <div>
                   <p className="text-white/80">
-                    Mon-Fri: 6am - 9pm<br />
-                    Sat: 8am - 6pm<br />
-                    Sun: 8am - 5pm
+                    Mon-Sat: 8am - 9pm<br />
+                    Sunday: 12pm - 9pm
                   </p>
                 </div>
               </li>

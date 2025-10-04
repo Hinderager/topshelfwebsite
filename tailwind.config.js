@@ -20,7 +20,7 @@ module.exports = {
         sans: ['var(--font-montserrat)', 'system-ui', 'sans-serif'],
         serif: ['var(--font-georgia)', 'Georgia', 'serif'],
         // Brand fonts: Harmonia Sans (use Montserrat as fallback) + Georgia
-        heading: ['var(--font-montserrat)', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-oswald)', 'var(--font-montserrat)', 'system-ui', 'sans-serif'],
         body: ['var(--font-georgia)', 'Georgia', 'serif'],
       },
       colors: {

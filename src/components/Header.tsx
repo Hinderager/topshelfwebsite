@@ -69,7 +69,7 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 pt-3 px-4">
       <div className="container mx-auto max-w-screen-2xl">
-        <div className="bg-gradient-to-b from-blue-50/95 to-slate-50/95 rounded-lg border-2 border-[#1e3a5f] shadow-xl px-8 flex items-center justify-between h-20">
+        <div className="bg-gradient-to-b from-stone-200/95 to-stone-100/95 rounded-lg border-2 border-[#1e3a5f] shadow-xl px-8 flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
@@ -245,7 +245,7 @@ export function Header() {
 
           {/* Desktop Phone */}
           <div className="hidden lg:flex items-center gap-2">
-            <a href="tel:2085932877" className="flex items-center gap-1.5 text-evening-blue hover:text-evening-blue/80 transition-colors font-bold text-lg xl:text-xl whitespace-nowrap">
+            <a href="tel:2085932877" className="flex items-center gap-1.5 text-[#1e3a5f] hover:text-[#4589A6] transition-colors font-bold text-lg xl:text-xl whitespace-nowrap">
               <Phone className="h-5 w-5 xl:h-6 xl:w-6" />
               <span>(208) 593-2877</span>
             </a>

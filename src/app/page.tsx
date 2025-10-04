@@ -6,6 +6,8 @@ import { ServicesShowcase } from '@/components/ServicesShowcase'
 import { TrustSection } from '@/components/TrustSection'
 import { GoogleReviews } from '@/components/GoogleReviews'
 import { ItemsWeTake } from '@/components/ItemsWeTake'
+import { FAQ } from '@/components/FAQ'
+import { MapSection } from '@/components/MapSection'
 import { Footer } from '@/components/Footer'
 import { StickyCallButton } from '@/components/StickyCallButton'
 
@@ -21,6 +23,8 @@ export default function Home() {
         <TrustSection />
         <GoogleReviews />
         <ItemsWeTake />
+        <FAQ />
+        <MapSection />
       </main>
       <Footer />
       <StickyCallButton />

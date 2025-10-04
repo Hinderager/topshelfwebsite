@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { Star, MapPin, ShieldCheck, FileCheck, Clock } from 'lucide-react'
@@ -33,15 +34,17 @@ export function HeroSection() {
   }, [])
   return (
     <section className="relative h-[750px] md:h-[850px] lg:h-[950px] flex items-center overflow-hidden">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-fixed"
-        style={{
-          backgroundImage: 'url(/images/best-of-all/hero.webp)',
-        }}
-      >
-        <div className="absolute inset-0 bg-black/50" />
-      </div>
+      {/* Background Image - Optimized with Next.js Image */}
+      <Image
+        src="/images/best-of-all/hero.webp"
+        alt="Top Shelf Moving and Junk Removal - Boise Idaho"
+        fill
+        priority
+        quality={85}
+        sizes="100vw"
+        className="object-cover"
+      />
+      <div className="absolute inset-0 bg-black/50 z-[1]" />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 pt-28 md:pt-32 pb-12">

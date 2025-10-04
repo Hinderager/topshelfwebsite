@@ -103,16 +103,15 @@ export function ItemsWeTake() {
   }
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-[#F4F5F6]">
       <div className="container mx-auto px-4">
         {/* Title */}
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12">
-          <span className="text-[#1e3a5f]">MAIN ITEMS WE </span>
-          <span className="text-[#7cb342]">COLLECT</span>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-center mb-12 drop-shadow-lg uppercase">
+          <span className="text-[#1e3a5f]">Main Items We Collect</span>
         </h2>
 
         {/* Main Content Container with Border */}
-        <div className="max-w-7xl mx-auto border-4 border-[#1e3a5f] rounded-2xl overflow-hidden bg-white">
+        <div className="max-w-7xl mx-auto border-4 border-[#1F201D] rounded-2xl overflow-hidden bg-white">
           <div className="grid lg:grid-cols-2 gap-0 items-start">
             {/* Left Side: Image Grid */}
             <div className="grid grid-cols-2 gap-0 order-2 lg:order-1 lg:sticky lg:top-0">
@@ -135,8 +134,8 @@ export function ItemsWeTake() {
                     onClick={() => toggleCategory(key)}
                     className={`w-full flex items-center justify-between px-6 md:px-8 py-5 md:py-6 text-left transition-all duration-200 ${
                       activeCategory === key
-                        ? 'bg-[#0d47a1] text-white'
-                        : 'bg-[#c5e063] text-[#1e3a5f] hover:bg-[#b8d656]'
+                        ? 'bg-[#4589A6] text-white'
+                        : 'bg-[#FFC845] text-[#1F201D] hover:bg-[#e5b13d]'
                     }`}
                   >
                     <span className="text-xl md:text-2xl lg:text-3xl font-bold">

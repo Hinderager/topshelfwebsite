@@ -41,7 +41,7 @@ export function ServicesShowcase() {
           <p className="text-[#4a90e2] uppercase tracking-wider text-sm font-semibold mb-2">
             Solutions Above The Rest
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1e3a5f] mb-4">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-[#1e3a5f] mb-4 uppercase drop-shadow-lg">
             Services We Offer The Treasure Valley
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto">
@@ -81,6 +81,7 @@ export function ServicesShowcase() {
                     src={service.image}
                     alt={service.title}
                     fill
+                    loading="lazy"
                     className="object-contain"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
