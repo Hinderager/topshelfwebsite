@@ -58,4 +58,24 @@
   }
 }
 
+/* Performance optimizations */
+@layer utilities {
+  /* Enable content-visibility for better rendering performance */
+  .content-auto {
+    content-visibility: auto;
+  }
+
+  /* Prevent layout shift with contain-intrinsic-size */
+  .contain-size {
+    contain-intrinsic-size: auto 500px;
+  }
+
+  /* Font rendering optimizations */
+  .optimize-text {
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
 

@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 
-export const dynamic = 'force-dynamic'
+// Enable static generation with ISR (Incremental Static Regeneration)
 export const revalidate = 3600 // Revalidate every hour
 
 interface GoogleReview {
@@ -43,18 +43,18 @@ export async function GET() {
   }
 
   try {
-    const response = await fetch(
+    const apiResponse = await fetch(
       `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=reviews,rating,user_ratings_total&key=${apiKey}`,
       {
         next: { revalidate: 3600 }, // Cache for 1 hour
       }
     )
 
-    if (!response.ok) {
+    if (!apiResponse.ok) {
       throw new Error('Failed to fetch from Google Places API')
     }
 
-    const data: GooglePlacesResponse = await response.json()
+    const data: GooglePlacesResponse = await apiResponse.json()
 
     if (data.status !== 'OK') {
       throw new Error(`Google Places API error: ${data.status}`)
@@ -65,11 +65,16 @@ export async function GET() {
       .filter((review) => review.rating === 5)
       .sort((a, b) => b.time - a.time) // Sort by timestamp, newest first
 
-    return NextResponse.json({
+    const response = NextResponse.json({
       reviews: fiveStarReviews,
       rating: data.result.rating || 5.0,
       totalReviews: data.result.user_ratings_total || 0,
     })
+
+    // Add cache headers for better performance
+    response.headers.set('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=7200')
+
+    return response
   } catch (error) {
     console.error('Error fetching Google reviews:', error)
     return NextResponse.json(

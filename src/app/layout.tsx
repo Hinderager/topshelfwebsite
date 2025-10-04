@@ -65,12 +65,24 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         <StructuredData />
+        {/* Preload critical hero image with fetchpriority */}
         <link
           rel="preload"
           href="/images/best-of-all/hero.webp"
           as="image"
           type="image/webp"
+          fetchPriority="high"
         />
+        {/* Preload logo for header */}
+        <link
+          rel="preload"
+          href="/logos/Asset 5@4x-white.png"
+          as="image"
+          type="image/png"
+        />
+        {/* Preconnect to external domains for faster font loading */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body className={`${montserrat.variable} ${oswald.variable} font-sans antialiased`}>
         {children}

@@ -43,6 +43,7 @@ export function HeroSection() {
         quality={85}
         sizes="100vw"
         className="object-cover"
+        fetchPriority="high"
       />
       <div className="absolute inset-0 bg-black/50 z-[1]" />
 

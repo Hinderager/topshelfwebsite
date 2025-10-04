@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -148,10 +149,14 @@ export function GoogleReviews() {
                   <div className="flex items-start gap-3 mb-4">
                     <div className="relative">
                       {review.profile_photo_url ? (
-                        <img
+                        <Image
                           src={review.profile_photo_url}
                           alt={review.author_name}
-                          className="w-12 h-12 rounded-full"
+                          width={48}
+                          height={48}
+                          className="rounded-full"
+                          loading="lazy"
+                          sizes="48px"
                         />
                       ) : (
                         <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#4a90e2] to-[#1e3a5f] flex items-center justify-center text-white font-semibold text-lg">

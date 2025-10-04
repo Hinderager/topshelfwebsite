@@ -81,9 +81,10 @@ export function ServicesShowcase() {
                     src={service.image}
                     alt={service.title}
                     fill
-                    loading="lazy"
+                    loading={index === 0 ? "eager" : "lazy"}
                     className="object-contain"
                     sizes="(max-width: 768px) 100vw, 50vw"
+                    quality={85}
                   />
                 </div>
               </div>
