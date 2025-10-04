@@ -22,7 +22,7 @@ export default function Home() {
         <ServicesShowcase />
         <TrustSection />
         <GoogleReviews />
-        <ItemsWeTake />
+        {/* <ItemsWeTake /> */}
         <FAQ />
         <MapSection />
       </main>
