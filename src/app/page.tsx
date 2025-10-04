@@ -4,7 +4,7 @@ import { ServicesGrid } from '@/components/ServicesGrid'
 import { ProcessSection } from '@/components/ProcessSection'
 import { TrustSection } from '@/components/TrustSection'
 import { GoogleReviews } from '@/components/GoogleReviews'
-import { PricingSection } from '@/components/PricingSection'
+import { ItemsWeTake } from '@/components/ItemsWeTake'
 import { Footer } from '@/components/Footer'
 import { StickyCallButton } from '@/components/StickyCallButton'
 
@@ -18,7 +18,7 @@ export default function Home() {
         <ProcessSection />
         <TrustSection />
         <GoogleReviews />
-        <PricingSection />
+        <ItemsWeTake />
       </main>
       <Footer />
       <StickyCallButton />

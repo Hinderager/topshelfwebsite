@@ -32,12 +32,12 @@ const services = [
 export function ServicesGrid() {
   return (
     <section className="py-20 bg-gradient-to-b from-blue-50/30 to-slate-100/50 relative overflow-hidden">
-      {/* Gradient dot pattern background with varying sizes */}
+      {/* Gradient dot pattern background */}
       <div className="absolute inset-0" style={{
-        backgroundImage: `radial-gradient(circle, #1e3a5f 2.5px, transparent 2.5px)`,
-        backgroundSize: '20px 20px',
-        maskImage: `radial-gradient(ellipse 80% 60% at 0% 0%, black, transparent 50%), radial-gradient(ellipse 80% 60% at 100% 100%, black, transparent 50%)`,
-        WebkitMaskImage: `radial-gradient(ellipse 80% 60% at 0% 0%, black, transparent 50%), radial-gradient(ellipse 80% 60% at 100% 100%, black, transparent 50%)`,
+        backgroundImage: `radial-gradient(circle, #1e3a5f 3px, transparent 3px)`,
+        backgroundSize: '16px 16px',
+        maskImage: `radial-gradient(ellipse 85% 65% at 0% 0%, black, transparent 60%), radial-gradient(ellipse 85% 65% at 100% 100%, black, transparent 60%)`,
+        WebkitMaskImage: `radial-gradient(ellipse 85% 65% at 0% 0%, black, transparent 60%), radial-gradient(ellipse 85% 65% at 100% 100%, black, transparent 60%)`,
         maskComposite: 'add',
         WebkitMaskComposite: 'source-over',
         opacity: 0.2
