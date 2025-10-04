@@ -36,7 +36,7 @@ export function HeroSection() {
     <section className="relative h-[750px] md:h-[850px] lg:h-[950px] flex items-center overflow-hidden">
       {/* Background Image - Optimized with Next.js Image */}
       <Image
-        src="/images/best-of-all/hero.webp"
+        src="/images/best-of-all/hero-optimized.webp"
         alt="Top Shelf Moving and Junk Removal - Boise Idaho"
         fill
         priority
