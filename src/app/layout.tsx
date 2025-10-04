@@ -46,6 +46,7 @@ export const metadata: Metadata = {
 }
 
 import { StructuredData } from '@/components/StructuredData'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 export default function RootLayout({
   children,
@@ -59,6 +60,7 @@ export default function RootLayout({
       </head>
       <body className={`${montserrat.variable} font-sans antialiased`}>
         {children}
+        <SpeedInsights />
       </body>
     </html>
   )
