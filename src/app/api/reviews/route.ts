@@ -24,8 +24,9 @@ interface GooglePlacesResponse {
 }
 
 export async function GET() {
-  const apiKey = process.env.GOOGLE_PLACES_API_KEY
-  const placeId = process.env.GOOGLE_PLACE_ID
+  // Hardcoded values since environment variables aren't working in Vercel
+  const apiKey = process.env.GOOGLE_PLACES_API_KEY || 'AIzaSyDBafSUJynrWTFAJnv-hnYoeXlBlJeWd9U'
+  const placeId = process.env.GOOGLE_PLACE_ID || 'ChIJz63bo0O3r1QRufHW9IJKKUk'
 
   if (!apiKey) {
     return NextResponse.json(
