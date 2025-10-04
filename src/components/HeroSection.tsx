@@ -48,8 +48,11 @@ export function HeroSection() {
         <div className="max-w-md md:max-w-lg lg:max-w-xl ml-auto">
           <div className="bg-[rgba(0,0,0,0.4)] backdrop-blur-sm rounded-lg border-[6px] border-[#4a90e2]/30 p-6 md:p-8 pb-16 md:pb-20 text-white text-center relative">
             {/* Main Headline - White on dark background */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2 leading-none uppercase tracking-tight">
-              <span className="text-[#4a90e2]">Boise</span> Moving and <br />Junk Removal
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight uppercase tracking-tight">
+              <span className="text-[#4a90e2]">Top Shelf</span> Moving and <br />Junk Removal
+              <span className="block text-xs sm:text-sm md:text-base font-semibold text-white/90 mt-2 mb-1 normal-case">
+                Boise | Meridian | Eagle
+              </span>
             </h1>
 
             {/* Small Header */}
