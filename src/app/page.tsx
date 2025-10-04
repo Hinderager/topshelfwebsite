@@ -19,10 +19,10 @@ export default function Home() {
         <HeroSection />
         <SectionDivider />
         <ServicesGrid />
-        <ServicesShowcase />
+        {/* <ServicesShowcase /> */}
         <TrustSection />
         <GoogleReviews />
-        {/* <ItemsWeTake /> */}
+        <ItemsWeTake />
         <FAQ />
         <MapSection />
       </main>
