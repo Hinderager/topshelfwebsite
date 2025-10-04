@@ -92,7 +92,7 @@ export function GoogleReviews() {
   const totalReviews = reviewsData.totalReviews
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gradient-to-b from-blue-50/30 to-slate-100/50">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">

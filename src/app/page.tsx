@@ -1,7 +1,8 @@
 import { Header } from '@/components/Header'
 import { HeroSection } from '@/components/HeroSection'
+import { SectionDivider } from '@/components/SectionDivider'
 import { ServicesGrid } from '@/components/ServicesGrid'
-import { ProcessSection } from '@/components/ProcessSection'
+import { ServicesShowcase } from '@/components/ServicesShowcase'
 import { TrustSection } from '@/components/TrustSection'
 import { GoogleReviews } from '@/components/GoogleReviews'
 import { ItemsWeTake } from '@/components/ItemsWeTake'
@@ -14,8 +15,9 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
+        <SectionDivider />
         <ServicesGrid />
-        <ProcessSection />
+        <ServicesShowcase />
         <TrustSection />
         <GoogleReviews />
         <ItemsWeTake />
