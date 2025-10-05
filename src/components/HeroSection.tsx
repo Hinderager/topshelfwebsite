@@ -33,16 +33,16 @@ export function HeroSection() {
     fetchReviews()
   }, [])
   return (
-    <section className="relative h-[750px] md:h-[850px] lg:h-[950px] flex items-center overflow-hidden">
+    <section className="relative h-[800px] md:h-[900px] lg:h-[950px] flex items-start lg:items-center overflow-hidden -mt-3 lg:mt-0">
       {/* Background Image - Responsive Optimized Images */}
       <picture>
         <source
           media="(max-width: 640px)"
-          srcSet="/images/best-of-all/hero-mobile.webp"
+          srcSet="/images/moving/residential-moves/hero-mobile.webp"
         />
         <source
           media="(min-width: 641px) and (max-width: 1024px)"
-          srcSet="/images/best-of-all/hero-tablet.webp"
+          srcSet="/images/moving/residential-moves/hero-tablet.webp"
         />
         <source
           media="(min-width: 1025px)"
@@ -55,71 +55,18 @@ export function HeroSection() {
           priority
           quality={85}
           sizes="100vw"
-          className="object-cover"
+          className="object-cover object-left-top md:object-[left_top_-200px] lg:object-cover"
           fetchPriority="high"
         />
       </picture>
-      <div className="absolute inset-0 bg-black/50 z-[1]" />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 pt-28 md:pt-32 pb-12">
-        <div className="max-w-md md:max-w-lg lg:max-w-xl ml-auto">
-          <div className="bg-[rgba(0,0,0,0.4)] backdrop-blur-sm rounded-lg border-[6px] border-[#4a90e2]/30 p-6 md:p-8 pb-16 md:pb-20 text-white text-center relative">
-            {/* Main Headline - White on dark background */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight uppercase tracking-tight">
-              <span className="text-[#4a90e2]">Top Shelf</span> Moving and <br />Junk Removal
-              <span className="block text-xs sm:text-sm md:text-base font-semibold text-white/90 mt-2 mb-1 normal-case">
-                Boise | Meridian | Eagle
-              </span>
-            </h1>
-
-            {/* Small Header */}
-            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-4 md:mb-6 italic">
-              Delivering Fresh Starts
-            </h2>
-
-            {/* Tagline */}
-            <div className="text-sm sm:text-base md:text-lg text-white mb-6 md:mb-8 grid grid-cols-2 gap-x-4 gap-y-2">
-              <div className="flex items-center gap-2">
-                <MapPin className="h-5 w-5 flex-shrink-0 text-[#4a90e2]" />
-                <span>Locally owned</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <FileCheck className="h-5 w-5 flex-shrink-0 text-[#4a90e2]" />
-                <span>Licensed</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="h-5 w-5 flex-shrink-0 text-[#4a90e2]" />
-                <span>Insured</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="h-5 w-5 flex-shrink-0 text-[#4a90e2]" />
-                <span>Same Day Service</span>
-              </div>
-            </div>
-
-            {/* Schedule Section */}
-            <h3 className="text-sm sm:text-base md:text-lg font-bold text-white uppercase tracking-wider mb-3 md:mb-4">
-              Schedule an Appointment
-            </h3>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-12 md:mb-16 justify-center">
-              <Button asChild size="lg" className="bg-ub-yellow hover:bg-ub-yellow/90 text-black font-bold text-lg md:text-xl px-8 md:px-10 py-6 md:py-8 rounded-lg uppercase w-full sm:w-48 border-4 border-ub-yellow">
-                <Link href="/quote">Book Now</Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                className="bg-white hover:bg-white/90 text-black font-bold text-lg md:text-xl px-8 md:px-10 py-6 md:py-8 rounded-lg border-4 border-ub-yellow w-full sm:w-48"
-              >
-                <a href="tel:2085932877">(208) 593-2877</a>
-              </Button>
-            </div>
-
-            {/* Google Rating Badge - Positioned to overlap bottom border */}
-            <div className="absolute -bottom-10 md:-bottom-12 left-1/2 transform -translate-x-1/2">
-              <div className="bg-white rounded-2xl px-3.5 py-2.5 md:px-4 md:py-3 shadow-lg">
+      <div className="relative z-10 container mx-auto px-4 pt-96 md:pt-[28rem] lg:pt-28 md:pt-32 pb-6 md:pb-6 lg:pb-12">
+        <div className="w-[120%] left-1/2 -translate-x-1/2 relative md:w-[120%] md:left-1/2 md:-translate-x-1/2 lg:w-auto lg:left-auto lg:translate-x-0 max-w-md md:max-w-lg lg:max-w-xl lg:ml-auto">
+          <div className="bg-[rgba(0,0,0,0.7)] backdrop-blur-sm lg:rounded-lg border-[3px] md:border-[3px] lg:border-[6px] border-b-[3px] md:border-b-[3px] lg:border-b-[6px] border-[#4a90e2]/30 px-0 py-6 md:py-6 lg:p-6 md:p-8 pt-20 md:pt-20 lg:pt-6 md:pt-8 pb-4 md:pb-4 lg:pb-16 md:pb-20 text-white text-center relative">
+            {/* Google Rating Badge - Top overlap on mobile, bottom overlap on desktop */}
+            <div className="absolute -top-10 md:-top-12 lg:-bottom-10 md:lg:-bottom-12 lg:top-auto left-1/2 transform -translate-x-1/2">
+              <div className="bg-white rounded-2xl px-3.5 py-2.5 md:px-4 md:py-3 shadow-lg inline-block">
                 <div className="flex items-center justify-center gap-3">
                   {/* Google Logo */}
                   <div className="flex-shrink-0 bg-white rounded-full shadow-md p-1">
@@ -152,6 +99,55 @@ export function HeroSection() {
                   </div>
                 </div>
               </div>
+            </div>
+
+            {/* Main Headline - White on dark background */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight uppercase tracking-tight mb-4">
+              <span className="text-[#4a90e2]">Top Shelf</span> Moving and <br />Junk Removal
+            </h1>
+
+            {/* Small Header */}
+            <h2 className="hidden lg:block text-lg sm:text-xl md:text-2xl font-bold text-white mb-4 md:mb-6 italic">
+              Delivering Fresh Starts
+            </h2>
+
+            {/* Tagline */}
+            <div className="text-sm sm:text-base md:text-lg text-white mb-4 md:mb-8 grid grid-cols-2 gap-x-4 gap-y-2 px-4">
+              <div className="flex items-center gap-2">
+                <MapPin className="h-5 w-5 flex-shrink-0 text-[#4a90e2]" />
+                <span>Locally owned</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FileCheck className="h-5 w-5 flex-shrink-0 text-[#4a90e2]" />
+                <span>Licensed</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="h-5 w-5 flex-shrink-0 text-[#4a90e2]" />
+                <span>Insured</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Clock className="h-5 w-5 flex-shrink-0 text-[#4a90e2]" />
+                <span>Same Day Service</span>
+              </div>
+            </div>
+
+            {/* Schedule Section */}
+            <h3 className="text-sm sm:text-base md:text-lg font-bold text-white uppercase tracking-wider mb-3 md:mb-4">
+              Schedule an Appointment
+            </h3>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-row lg:flex-col sm:flex-row gap-3 md:gap-4 mb-4 lg:mb-12 md:lg:mb-16 justify-center px-8 lg:px-0">
+              <Button asChild size="lg" className="bg-ub-yellow hover:bg-ub-yellow/90 text-black font-bold text-lg md:text-xl px-3 md:px-10 lg:px-8 lg:px-10 py-5 md:py-8 lg:py-6 lg:py-8 rounded-lg uppercase flex-1 lg:w-full sm:w-48 border-4 border-ub-yellow">
+                <Link href="/quote">Book Now</Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                className="bg-white hover:bg-white/90 text-black font-bold text-lg md:text-xl px-3 md:px-10 lg:px-8 lg:px-10 py-5 md:py-8 lg:py-6 lg:py-8 rounded-lg border-4 border-ub-yellow flex-1 lg:w-full sm:w-48"
+              >
+                <a href="tel:2085932877">(208) 593-2877</a>
+              </Button>
             </div>
           </div>
         </div>
