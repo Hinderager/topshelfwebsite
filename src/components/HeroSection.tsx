@@ -55,7 +55,7 @@ export function HeroSection() {
           priority
           quality={85}
           sizes="100vw"
-          className="object-cover object-left-top sm:object-center md:object-cover md:object-top lg:object-cover lg:object-left"
+          className="object-cover object-left-top sm:object-center md:object-top lg:object-left"
           fetchPriority="high"
         />
       </picture>
@@ -63,7 +63,7 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 pt-96 md:pt-[33rem] lg:pt-28 lg:pt-32 pb-6 md:pb-12 lg:pb-12">
         <div className="w-[120%] left-1/2 -translate-x-1/2 relative md:w-[120%] md:left-1/2 md:-translate-x-1/2 md:scale-75 lg:w-auto lg:left-auto lg:translate-x-0 lg:scale-100 max-w-lg sm:max-w-xl md:max-w-4xl lg:max-w-xl lg:ml-auto">
-          <div className="bg-[rgba(0,0,0,0.7)] backdrop-blur-sm lg:rounded-lg border-[3px] md:border-[3px] lg:border-[6px] border-b-[3px] md:border-b-[3px] lg:border-b-[6px] border-[#4a90e2]/30 px-0 py-6 md:py-6 lg:p-6 md:p-8 pt-20 md:pt-28 lg:pt-6 pb-4 md:pb-26 lg:pb-16 md:-mt-16 lg:mt-0 text-white text-center relative">
+          <div className="bg-[rgba(0,0,0,0.7)] backdrop-blur-ios lg:rounded-lg border-[3px] md:border-[3px] lg:border-[6px] border-b-[3px] md:border-b-[3px] lg:border-b-[6px] border-[#4a90e2]/30 px-0 py-6 md:py-6 lg:p-6 md:p-8 pt-20 md:pt-28 lg:pt-6 pb-4 md:pb-26 lg:pb-16 md:-mt-16 lg:mt-0 text-white text-center relative">
             {/* Google Rating Badge - Top overlap on mobile, bottom overlap on desktop */}
             <div className="absolute -top-10 md:-top-12 lg:-bottom-10 md:lg:-bottom-12 lg:top-auto left-1/2 transform -translate-x-1/2">
               <div className="bg-white rounded-2xl px-3.5 py-2.5 md:px-4 md:py-3 shadow-lg inline-block">

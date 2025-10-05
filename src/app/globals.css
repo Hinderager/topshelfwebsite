@@ -76,6 +76,12 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  /* Mobile-compatible backdrop blur with webkit prefix for Safari iOS */
+  .backdrop-blur-ios {
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
 }
 
 
