@@ -68,7 +68,7 @@ export default function RootLayout({
         {/* Preload critical hero image with fetchpriority - responsive */}
         <link
           rel="preload"
-          href="/images/best-of-all/hero-mobile.webp"
+          href="/images/moving/residential-moves/hero-mobile.webp"
           as="image"
           type="image/webp"
           media="(max-width: 640px)"
@@ -76,7 +76,7 @@ export default function RootLayout({
         />
         <link
           rel="preload"
-          href="/images/best-of-all/hero-tablet.webp"
+          href="/images/moving/residential-moves/hero-tablet.webp"
           as="image"
           type="image/webp"
           media="(min-width: 641px) and (max-width: 1024px)"
