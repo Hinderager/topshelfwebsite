@@ -67,11 +67,11 @@ export function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 pt-3 px-4">
-      <div className="container mx-auto max-w-screen-2xl">
-        <div className="bg-gradient-to-b from-stone-200/95 to-stone-100/95 rounded-lg border-2 border-[#1e3a5f] shadow-xl px-8 flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
+    <header className="fixed top-0 left-0 right-0 z-50 lg:pt-3 lg:px-4">
+      <div className="lg:container lg:mx-auto lg:max-w-screen-2xl">
+        <div className="bg-gradient-to-b from-stone-200/95 to-stone-100/95 lg:rounded-lg border-b-2 lg:border-2 border-[#1e3a5f] shadow-xl px-4 lg:px-8 flex items-center h-14 lg:h-20">
+          {/* Logo - Left third on mobile */}
+          <Link href="/" className="flex items-center lg:flex-1 flex-1 justify-start">
             <Image
               src="/logos/Asset 5@4x-white.webp"
               alt="Top Shelf Moving and Junk Removal"
@@ -93,11 +93,11 @@ export function Header() {
             <Image
               src="/logos/full-white.webp"
               alt="Top Shelf Moving and Junk Removal"
-              width={60}
-              height={60}
-              className="lg:hidden h-auto w-auto max-h-12"
+              width={50}
+              height={50}
+              className="lg:hidden h-auto w-auto max-h-10"
               style={{ objectFit: 'contain' }}
-              sizes="(max-width: 1023px) 60px, 0px"
+              sizes="(max-width: 1023px) 50px, 0px"
             />
           </Link>
 
@@ -243,19 +243,19 @@ export function Header() {
             </div>
           </nav>
 
-          {/* Desktop Phone */}
-          <div className="hidden lg:flex items-center gap-2">
-            <a href="tel:2085932877" className="flex items-center gap-1.5 text-[#1e3a5f] hover:text-[#4589A6] transition-colors font-bold text-lg xl:text-xl whitespace-nowrap">
-              <Phone className="h-5 w-5 xl:h-6 xl:w-6" />
+          {/* Phone Number - Centered on mobile, Right on desktop */}
+          <div className="flex items-center flex-1 justify-center lg:justify-end">
+            <a
+              href="tel:2085932877"
+              className="flex items-center gap-1.5 text-[#1e3a5f] hover:text-[#4589A6] transition-colors font-bold text-base lg:text-lg xl:text-xl whitespace-nowrap"
+            >
+              <Phone className="hidden lg:block h-5 w-5 lg:h-5 lg:w-5 xl:h-6 xl:w-6" />
               <span>(208) 593-2877</span>
             </a>
           </div>
 
-          {/* Mobile Icons */}
-          <div className="lg:hidden flex items-center gap-4">
-            <a href="tel:2085932877" className="text-gray-700 hover:text-polar-blue transition-colors">
-              <Phone className="h-6 w-6" />
-            </a>
+          {/* Mobile Menu Icon - Right third on mobile */}
+          <div className="flex items-center flex-1 justify-end lg:hidden">
             <button
               className="text-gray-700 hover:text-polar-blue transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -267,8 +267,8 @@ export function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t">
-            <nav className="flex flex-col space-y-4">
+          <div className="lg:hidden py-4 bg-stone-200/95 border-b-2 border-[#1e3a5f]">
+            <nav className="flex flex-col space-y-4 px-4">
               <Link href="#" className="text-gray-700 hover:text-[#1e3a5f]">Junk Removal</Link>
               <Link href="#" className="text-gray-700 hover:text-[#1e3a5f]">Moving</Link>
               <Link href="#" className="text-gray-700 hover:text-[#1e3a5f]">Demolition</Link>
