@@ -65,20 +65,37 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         <StructuredData />
-        {/* Preload critical hero image with fetchpriority */}
+        {/* Preload critical hero image with fetchpriority - responsive */}
         <link
           rel="preload"
-          href="/images/best-of-all/hero.webp"
+          href="/images/best-of-all/hero-mobile.webp"
           as="image"
           type="image/webp"
+          media="(max-width: 640px)"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          href="/images/best-of-all/hero-tablet.webp"
+          as="image"
+          type="image/webp"
+          media="(min-width: 641px) and (max-width: 1024px)"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          href="/images/best-of-all/hero-desktop.webp"
+          as="image"
+          type="image/webp"
+          media="(min-width: 1025px)"
           fetchPriority="high"
         />
         {/* Preload logo for header */}
         <link
           rel="preload"
-          href="/logos/Asset 5@4x-white.png"
+          href="/logos/Asset 5@4x-white.webp"
           as="image"
-          type="image/png"
+          type="image/webp"
         />
         {/* Preconnect to external domains for faster font loading */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />

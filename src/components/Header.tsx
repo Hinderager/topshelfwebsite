@@ -73,7 +73,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/logos/Asset 5@4x-white.png"
+              src="/logos/Asset 5@4x-white.webp"
               alt="Top Shelf Moving and Junk Removal"
               width={200}
               height={60}
@@ -82,7 +82,7 @@ export function Header() {
               sizes="(min-width: 1280px) 200px, 0px"
             />
             <Image
-              src="/logos/full-white.png"
+              src="/logos/full-white.webp"
               alt="Top Shelf Moving and Junk Removal"
               width={60}
               height={60}
@@ -91,7 +91,7 @@ export function Header() {
               sizes="(min-width: 1024px) and (max-width: 1279px) 60px, 0px"
             />
             <Image
-              src="/logos/full-white.png"
+              src="/logos/full-white.webp"
               alt="Top Shelf Moving and Junk Removal"
               width={60}
               height={60}

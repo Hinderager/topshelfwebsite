@@ -34,17 +34,31 @@ export function HeroSection() {
   }, [])
   return (
     <section className="relative h-[750px] md:h-[850px] lg:h-[950px] flex items-center overflow-hidden">
-      {/* Background Image - Optimized with Next.js Image */}
-      <Image
-        src="/images/best-of-all/hero-ultra-optimized.webp"
-        alt="Top Shelf Moving and Junk Removal - Boise Idaho"
-        fill
-        priority
-        quality={85}
-        sizes="100vw"
-        className="object-cover"
-        fetchPriority="high"
-      />
+      {/* Background Image - Responsive Optimized Images */}
+      <picture>
+        <source
+          media="(max-width: 640px)"
+          srcSet="/images/best-of-all/hero-mobile.webp"
+        />
+        <source
+          media="(min-width: 641px) and (max-width: 1024px)"
+          srcSet="/images/best-of-all/hero-tablet.webp"
+        />
+        <source
+          media="(min-width: 1025px)"
+          srcSet="/images/best-of-all/hero-desktop.webp"
+        />
+        <Image
+          src="/images/best-of-all/hero-desktop.webp"
+          alt="Top Shelf Moving and Junk Removal - Boise Idaho"
+          fill
+          priority
+          quality={85}
+          sizes="100vw"
+          className="object-cover"
+          fetchPriority="high"
+        />
+      </picture>
       <div className="absolute inset-0 bg-black/50 z-[1]" />
 
       {/* Content */}

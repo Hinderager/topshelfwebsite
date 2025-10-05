@@ -1,4 +1,5 @@
 import { Suspense } from 'react'
+import dynamic from 'next/dynamic'
 import { Header } from '@/components/Header'
 import { HeroSection } from '@/components/HeroSection'
 import { SectionDivider } from '@/components/SectionDivider'
@@ -7,10 +8,17 @@ import { ServicesShowcase } from '@/components/ServicesShowcase'
 import { TrustSection } from '@/components/TrustSection'
 import { GoogleReviews } from '@/components/GoogleReviews'
 import { ItemsWeTake } from '@/components/ItemsWeTake'
-import { FAQ } from '@/components/FAQ'
-import { MapSection } from '@/components/MapSection'
 import { Footer } from '@/components/Footer'
 import { StickyCallButton } from '@/components/StickyCallButton'
+
+// Lazy load below-fold components for better initial load performance
+const FAQ = dynamic(() => import('@/components/FAQ').then(mod => ({ default: mod.FAQ })), {
+  loading: () => <div className="py-20 bg-white"><div className="container mx-auto px-4 text-center text-gray-600">Loading FAQ...</div></div>
+})
+
+const MapSection = dynamic(() => import('@/components/MapSection').then(mod => ({ default: mod.MapSection })), {
+  loading: () => <div className="py-20 bg-gray-50"><div className="container mx-auto px-4 text-center text-gray-600">Loading map...</div></div>
+})
 
 function ReviewsSkeleton() {
   return (
