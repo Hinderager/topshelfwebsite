@@ -33,7 +33,7 @@ export function HeroSection() {
     fetchReviews()
   }, [])
   return (
-    <section className="relative h-[800px] md:h-[900px] lg:h-[950px] flex items-start lg:items-center overflow-hidden -mt-3 lg:mt-0">
+    <section className="relative h-[800px] md:h-[900px] lg:h-[950px] flex items-start lg:items-center overflow-hidden">
       {/* Background Image - Responsive Optimized Images */}
       <picture>
         <source
