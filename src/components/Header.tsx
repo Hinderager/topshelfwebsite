@@ -69,11 +69,11 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 lg:pt-3 lg:px-4">
       <div className="lg:container lg:mx-auto lg:max-w-screen-2xl">
-        <div className="bg-gradient-to-b from-stone-200/95 to-stone-100/95 lg:rounded-lg border-b-2 lg:border-2 border-[#1e3a5f] shadow-xl px-4 lg:px-8 flex items-center h-14 lg:h-20">
+        <div className="bg-[#10477d] lg:rounded-lg border-b-2 lg:border-2 border-[#1e3a5f] shadow-xl px-4 lg:px-8 flex items-center h-14 lg:h-20">
           {/* Logo - Left third on mobile */}
           <Link href="/" className="flex items-center lg:flex-1 flex-1 justify-start">
             <Image
-              src="/logos/Asset 5@4x-white.webp"
+              src="/assets/Logos/white logo long.png"
               alt="Top Shelf Moving and Junk Removal"
               width={200}
               height={60}
@@ -82,13 +82,13 @@ export function Header() {
               sizes="(min-width: 1280px) 200px, 0px"
             />
             <Image
-              src="/logos/full-white.webp"
+              src="/assets/Logos/white logo long.png"
               alt="Top Shelf Moving and Junk Removal"
-              width={60}
+              width={150}
               height={60}
               className="hidden lg:block xl:hidden h-auto w-auto max-h-12"
               style={{ objectFit: 'contain' }}
-              sizes="(min-width: 1024px) and (max-width: 1279px) 60px, 0px"
+              sizes="(min-width: 1024px) and (max-width: 1279px) 150px, 0px"
             />
             <Image
               src="/logos/full-white.webp"
@@ -109,7 +109,7 @@ export function Header() {
               onMouseEnter={() => handleMouseEnter('junk')}
               onMouseLeave={handleMouseLeave}
             >
-              <button className="flex items-center space-x-1 text-gray-700 hover:text-[#1e3a5f] transition-colors font-bold text-sm xl:text-base whitespace-nowrap">
+              <button className="flex items-center space-x-1 text-white hover:text-gray-200 transition-colors font-bold text-sm xl:text-base whitespace-nowrap">
                 <span>Junk Removal</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
@@ -139,7 +139,7 @@ export function Header() {
               onMouseEnter={() => handleMouseEnter('moving')}
               onMouseLeave={handleMouseLeave}
             >
-              <button className="flex items-center space-x-1 text-gray-700 hover:text-[#1e3a5f] transition-colors font-bold text-sm xl:text-base whitespace-nowrap">
+              <button className="flex items-center space-x-1 text-white hover:text-gray-200 transition-colors font-bold text-sm xl:text-base whitespace-nowrap">
                 <span>Moving</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
@@ -169,7 +169,7 @@ export function Header() {
               onMouseEnter={() => handleMouseEnter('demolition')}
               onMouseLeave={handleMouseLeave}
             >
-              <button className="flex items-center space-x-1 text-gray-700 hover:text-[#1e3a5f] transition-colors font-bold text-sm xl:text-base whitespace-nowrap">
+              <button className="flex items-center space-x-1 text-white hover:text-gray-200 transition-colors font-bold text-sm xl:text-base whitespace-nowrap">
                 <span>Demolition</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
@@ -194,7 +194,7 @@ export function Header() {
               onMouseEnter={() => handleMouseEnter('areas')}
               onMouseLeave={handleMouseLeave}
             >
-              <button className="flex items-center space-x-1 text-gray-700 hover:text-[#1e3a5f] transition-colors font-bold text-sm xl:text-base whitespace-nowrap">
+              <button className="flex items-center space-x-1 text-white hover:text-gray-200 transition-colors font-bold text-sm xl:text-base whitespace-nowrap">
                 <span>Service Areas</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
@@ -213,7 +213,7 @@ export function Header() {
               )}
             </div>
 
-            <Link href="/contact" className="text-gray-700 hover:text-[#1e3a5f] transition-colors font-bold text-sm xl:text-base whitespace-nowrap">
+            <Link href="/contact" className="text-white hover:text-gray-200 transition-colors font-bold text-sm xl:text-base whitespace-nowrap">
               Contact
             </Link>
 
@@ -223,7 +223,7 @@ export function Header() {
               onMouseEnter={() => handleMouseEnter('resources')}
               onMouseLeave={handleMouseLeave}
             >
-              <button className="flex items-center space-x-1 text-gray-700 hover:text-[#1e3a5f] transition-colors font-bold text-sm xl:text-base whitespace-nowrap">
+              <button className="flex items-center space-x-1 text-white hover:text-gray-200 transition-colors font-bold text-sm xl:text-base whitespace-nowrap">
                 <span>Resources</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
@@ -247,7 +247,7 @@ export function Header() {
           <div className="flex items-center flex-1 justify-center lg:justify-end">
             <a
               href="tel:2085932877"
-              className="flex items-center gap-1.5 text-[#1e3a5f] hover:text-[#4589A6] transition-colors font-bold text-base lg:text-lg xl:text-xl whitespace-nowrap"
+              className="flex items-center gap-1.5 text-white hover:text-gray-200 transition-colors font-bold text-base lg:text-lg xl:text-xl whitespace-nowrap"
             >
               <Phone className="hidden lg:block h-5 w-5 lg:h-5 lg:w-5 xl:h-6 xl:w-6" />
               <span>(208) 593-2877</span>
@@ -257,7 +257,7 @@ export function Header() {
           {/* Mobile Menu Icon - Right third on mobile */}
           <div className="flex items-center flex-1 justify-end lg:hidden">
             <button
-              className="text-gray-700 hover:text-polar-blue transition-colors"
+              className="text-white hover:text-gray-200 transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -267,14 +267,14 @@ export function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden py-4 bg-stone-200/95 border-b-2 border-[#1e3a5f]">
+          <div className="lg:hidden py-4 bg-[#10477d] border-b-2 border-[#1e3a5f]">
             <nav className="flex flex-col space-y-4 px-4">
-              <Link href="#" className="text-gray-700 hover:text-[#1e3a5f]">Junk Removal</Link>
-              <Link href="#" className="text-gray-700 hover:text-[#1e3a5f]">Moving</Link>
-              <Link href="#" className="text-gray-700 hover:text-[#1e3a5f]">Demolition</Link>
-              <Link href="#" className="text-gray-700 hover:text-[#1e3a5f]">Service Areas</Link>
-              <Link href="/contact" className="text-gray-700 hover:text-[#1e3a5f]">Contact</Link>
-              <Link href="#" className="text-gray-700 hover:text-[#1e3a5f]">Resources</Link>
+              <Link href="#" className="text-white hover:text-gray-200">Junk Removal</Link>
+              <Link href="#" className="text-white hover:text-gray-200">Moving</Link>
+              <Link href="#" className="text-white hover:text-gray-200">Demolition</Link>
+              <Link href="#" className="text-white hover:text-gray-200">Service Areas</Link>
+              <Link href="/contact" className="text-white hover:text-gray-200">Contact</Link>
+              <Link href="#" className="text-white hover:text-gray-200">Resources</Link>
               <div className="flex flex-col space-y-2 pt-4">
                 <Button asChild className="bg-ub-yellow hover:bg-ub-yellow/90 text-black font-bold w-full">
                   <a href="tel:2085932877">Call Now (208) 593-2877</a>

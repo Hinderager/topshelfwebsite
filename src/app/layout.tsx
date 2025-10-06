@@ -93,9 +93,9 @@ export default function RootLayout({
         {/* Preload logo for header */}
         <link
           rel="preload"
-          href="/logos/Asset 5@4x-white.webp"
+          href="/assets/Logos/white logo long.png"
           as="image"
-          type="image/webp"
+          type="image/png"
         />
         {/* Preconnect to external domains for faster font loading */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
