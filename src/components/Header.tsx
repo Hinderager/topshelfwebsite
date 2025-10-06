@@ -69,35 +69,26 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 lg:pt-3 lg:px-4">
       <div className="lg:container lg:mx-auto lg:max-w-screen-2xl">
-        <div className="bg-[#10477d] lg:rounded-lg border-b-2 lg:border-2 border-[#1e3a5f] shadow-xl px-4 lg:px-8 flex items-center h-14 lg:h-20">
-          {/* Logo - Left third on mobile */}
+        <div className="bg-[#10477d] lg:rounded-lg border-b-2 lg:border-2 border-[#1e3a5f] shadow-xl px-2 sm:px-4 md:px-6 lg:px-8 flex items-center h-14 lg:h-20">
+          {/* Logo - Fixed size, padding compresses before switching */}
           <Link href="/" className="flex items-center lg:flex-1 flex-1 justify-start">
             <Image
               src="/assets/Logos/white logo long.png"
               alt="Top Shelf Moving and Junk Removal"
               width={200}
               height={60}
-              className="hidden xl:block h-auto w-auto max-h-12"
+              className="hidden md:block h-auto w-auto max-h-12"
               style={{ objectFit: 'contain' }}
-              sizes="(min-width: 1280px) 200px, 0px"
-            />
-            <Image
-              src="/assets/Logos/white logo long.png"
-              alt="Top Shelf Moving and Junk Removal"
-              width={150}
-              height={60}
-              className="hidden lg:block xl:hidden h-auto w-auto max-h-12"
-              style={{ objectFit: 'contain' }}
-              sizes="(min-width: 1024px) and (max-width: 1279px) 150px, 0px"
+              sizes="(min-width: 768px) 200px, 0px"
             />
             <Image
               src="/assets/Logos/white logo short.png"
               alt="Top Shelf Moving and Junk Removal"
               width={50}
               height={50}
-              className="lg:hidden h-auto w-auto max-h-10"
+              className="md:hidden h-auto w-auto max-h-10"
               style={{ objectFit: 'contain' }}
-              sizes="(max-width: 1023px) 50px, 0px"
+              sizes="(max-width: 767px) 50px, 0px"
             />
           </Link>
 
