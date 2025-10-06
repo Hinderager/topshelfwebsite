@@ -77,18 +77,18 @@ export function Header() {
               alt="Top Shelf Moving and Junk Removal"
               width={200}
               height={60}
-              className="hidden md:block h-auto w-auto max-h-12"
-              style={{ objectFit: 'contain' }}
-              sizes="(min-width: 768px) 200px, 0px"
+              className="hidden md:block h-12"
+              style={{ width: '200px', height: 'auto', objectFit: 'contain' }}
+              sizes="200px"
             />
             <Image
               src="/assets/Logos/white logo short.png"
               alt="Top Shelf Moving and Junk Removal"
               width={50}
               height={50}
-              className="md:hidden h-auto w-auto max-h-10"
-              style={{ objectFit: 'contain' }}
-              sizes="(max-width: 767px) 50px, 0px"
+              className="md:hidden h-10"
+              style={{ width: '50px', height: 'auto', objectFit: 'contain' }}
+              sizes="50px"
             />
           </Link>
 
