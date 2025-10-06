@@ -63,7 +63,7 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 pt-96 md:pt-[33rem] lg:pt-28 lg:pt-32 pb-6 md:pb-12 lg:pb-12">
         <div className="w-[120%] left-1/2 -translate-x-1/2 relative md:w-[120%] md:left-1/2 md:-translate-x-1/2 md:scale-75 lg:w-auto lg:left-auto lg:translate-x-0 lg:scale-100 max-w-lg sm:max-w-xl md:max-w-4xl lg:max-w-xl lg:ml-auto">
-          <div className="bg-[rgba(0,0,0,0.7)] backdrop-blur-ios lg:rounded-lg border-[3px] md:border-[3px] lg:border-[6px] border-b-[3px] md:border-b-[3px] lg:border-b-[6px] border-[#10477d] px-0 py-6 md:py-6 lg:p-6 md:p-8 pt-20 md:pt-28 lg:pt-6 pb-4 md:pb-26 lg:pb-16 md:-mt-16 lg:mt-0 text-white text-center relative">
+          <div className="bg-[rgba(0,0,0,0.55)] md:bg-[rgba(0,0,0,0.7)] backdrop-blur-ios lg:rounded-lg border-[3px] md:border-[3px] lg:border-[6px] border-b-[3px] md:border-b-[3px] lg:border-b-[6px] border-[#10477d] px-0 py-6 md:py-6 lg:p-6 md:p-8 pt-20 md:pt-28 lg:pt-6 pb-4 md:pb-26 lg:pb-16 md:-mt-16 lg:mt-0 text-white text-center relative">
             {/* Google Rating Badge - Top overlap on mobile, bottom overlap on desktop */}
             <div className="absolute -top-10 md:-top-12 lg:-bottom-10 md:lg:-bottom-12 lg:top-auto left-1/2 transform -translate-x-1/2">
               <div className="bg-white rounded-2xl px-3.5 py-2.5 md:px-4 md:py-3 shadow-lg inline-block">
@@ -141,15 +141,18 @@ export function HeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-row gap-3 md:gap-4 mb-4 lg:mb-12 md:lg:mb-16 justify-center px-8 lg:px-0">
-              <Button asChild size="lg" className="bg-ub-yellow hover:bg-ub-yellow/90 text-black font-bold text-sm md:text-2xl lg:text-2xl px-3 md:px-10 lg:px-8 lg:px-10 py-5 md:py-8 lg:py-6 lg:py-8 rounded-lg uppercase flex-1 lg:flex-1 sm:w-48 border-4 border-ub-yellow">
+              <Button asChild size="lg" className="bg-ub-yellow hover:bg-ub-yellow/90 text-black font-bold text-lg md:text-2xl lg:text-2xl px-3 md:px-10 lg:px-8 lg:px-10 py-5 md:py-8 lg:py-6 lg:py-8 rounded-lg uppercase flex-1 lg:flex-1 sm:w-48 border-4 border-ub-yellow">
                 <Link href="/quote">Book Now</Link>
               </Button>
               <Button
                 asChild
                 size="lg"
-                className="bg-white hover:bg-white/90 text-black font-bold text-sm md:text-2xl lg:text-2xl px-3 md:px-10 lg:px-8 lg:px-10 py-5 md:py-8 lg:py-6 lg:py-8 rounded-lg border-4 border-ub-yellow flex-1 lg:flex-1 sm:w-48"
+                className="bg-white hover:bg-white/90 text-black font-bold text-lg md:text-2xl lg:text-2xl px-3 md:px-10 lg:px-8 lg:px-10 py-5 md:py-8 lg:py-6 lg:py-8 rounded-lg border-4 border-ub-yellow flex-1 lg:flex-1 sm:w-48"
               >
-                <a href="tel:2085932877">(208) 593-2877</a>
+                <a href="tel:2085932877">
+                  <span className="md:hidden">Call Now</span>
+                  <span className="hidden md:inline">(208) 593-2877</span>
+                </a>
               </Button>
             </div>
           </div>

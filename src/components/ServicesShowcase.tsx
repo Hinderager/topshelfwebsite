@@ -38,14 +38,11 @@ export function ServicesShowcase() {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-[#4a90e2] uppercase tracking-wider text-sm font-semibold mb-2">
-            Solutions Above The Rest
-          </p>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-[#1e3a5f] mb-4 uppercase" style={{textShadow: '2px 2px 3px rgba(0,0,0,0.3), 1px 1px 2px rgba(0,0,0,0.2)'}}>
-            Services We Offer The Treasure Valley
+            Serving Boise and Surrounding Areas
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-            From Boise to the scenic stretches of Southwest Idaho, we provide expert cleanouts, local moving services, and junk removal!
+            From Boise to the scenic stretches of Southwest Idaho, we provide expert cleanouts, local moving services, demolition and junk removal!
           </p>
         </div>
 
@@ -54,28 +51,15 @@ export function ServicesShowcase() {
           {services.map((service, index) => (
             <div
               key={service.title}
-              className={`grid lg:grid-cols-2 gap-8 md:gap-12 items-center ${
-                index % 2 === 1 ? 'lg:grid-flow-dense' : ''
-              }`}
+              className="flex flex-col lg:grid lg:grid-cols-2 gap-8 md:gap-12 items-center"
             >
-              {/* Text Content */}
-              <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                <h3 className="text-3xl md:text-4xl font-bold text-[#1e3a5f] mb-6">
-                  {service.title}
-                </h3>
-                <p className="text-gray-700 leading-relaxed text-lg mb-8">
-                  {service.description}
-                </p>
-                <Link
-                  href={service.link}
-                  className="inline-block bg-[#FFC845] hover:bg-[#e5b13d] text-black font-bold px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 uppercase tracking-wide"
-                >
-                  {service.buttonText}
-                </Link>
-              </div>
+              {/* Title - Mobile/Tablet only */}
+              <h3 className="text-3xl md:text-4xl font-bold text-[#1e3a5f] lg:hidden w-full">
+                {service.title}
+              </h3>
 
-              {/* Image */}
-              <div className={`relative ${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
+              {/* Image - Second on mobile, alternates on desktop */}
+              <div className={`relative w-full ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                 <div className="relative aspect-[4/3]">
                   <Image
                     src={service.image}
@@ -87,6 +71,23 @@ export function ServicesShowcase() {
                     quality={85}
                   />
                 </div>
+              </div>
+
+              {/* Text Content - Alternates on desktop */}
+              <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
+                {/* Title - Desktop only */}
+                <h3 className="hidden lg:block text-3xl md:text-4xl font-bold text-[#1e3a5f] mb-6">
+                  {service.title}
+                </h3>
+                <p className="text-gray-700 leading-relaxed text-lg mb-8">
+                  {service.description}
+                </p>
+                <Link
+                  href={service.link}
+                  className="inline-block bg-[#FFC845] hover:bg-[#e5b13d] text-black font-bold px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 uppercase tracking-wide"
+                >
+                  {service.buttonText}
+                </Link>
               </div>
             </div>
           ))}

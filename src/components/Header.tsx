@@ -268,7 +268,7 @@ export function Header() {
               <Link href="#" className="text-white hover:text-gray-200">Resources</Link>
               <div className="flex flex-col space-y-2 pt-4">
                 <Button asChild className="bg-ub-yellow hover:bg-ub-yellow/90 text-black font-bold w-full">
-                  <a href="tel:2085932877">Call Now (208) 593-2877</a>
+                  <a href="tel:2085932877">Call Now</a>
                 </Button>
                 <Button asChild className="bg-polar-blue hover:bg-polar-blue/90 text-white font-bold w-full">
                   <Link href="/quote">Get Free Quote</Link>

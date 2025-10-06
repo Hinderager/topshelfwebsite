@@ -114,7 +114,8 @@ export function Footer() {
                     href="tel:2085932877"
                     className="text-white/80 hover:text-white transition-colors font-semibold"
                   >
-                    (208) 593-2877
+                    <span className="md:hidden">Call Now</span>
+                    <span className="hidden md:inline">(208) 593-2877</span>
                   </a>
                 </div>
               </li>
