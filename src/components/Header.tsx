@@ -71,7 +71,7 @@ export function Header() {
       <div className="lg:container lg:mx-auto lg:max-w-screen-2xl">
         <div className="bg-[#10477d] lg:rounded-lg border-b-2 lg:border-2 border-[#1e3a5f] shadow-xl px-2 sm:px-4 md:px-6 lg:px-8 flex items-center h-14 lg:h-20">
           {/* Logo - Desktop: short at lg, long at xl+ for more nav space */}
-          <Link href="/" className="flex items-center lg:flex-1 flex-1 justify-start">
+          <Link href="/" className="flex items-center lg:flex-1 flex-1 justify-start lg:mr-8 xl:mr-12">
             <Image
               src="/assets/Logos/white logo long.png"
               alt="Top Shelf Moving and Junk Removal"
@@ -93,7 +93,7 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-4 xl:space-x-6">
+          <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {/* Junk Removal Dropdown */}
             <div
               className="relative group"
@@ -235,7 +235,7 @@ export function Header() {
           </nav>
 
           {/* Phone Number - Centered on mobile, Right on desktop */}
-          <div className="flex items-center flex-1 justify-center lg:justify-end">
+          <div className="flex items-center flex-1 justify-center lg:justify-end lg:ml-8 xl:ml-12">
             <a
               href="tel:2085932877"
               className="flex items-center gap-1.5 text-white hover:text-gray-200 transition-colors font-bold text-base lg:text-lg xl:text-xl whitespace-nowrap"
