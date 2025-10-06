@@ -77,8 +77,8 @@ export function Header() {
               alt="Top Shelf Moving and Junk Removal"
               width={200}
               height={60}
-              className="hidden xl:block h-12"
-              style={{ width: '200px', height: 'auto', objectFit: 'contain' }}
+              className="hidden xl:block h-12 flex-shrink-0"
+              style={{ width: '200px', height: 'auto', objectFit: 'contain', minWidth: '200px' }}
               sizes="200px"
             />
             <Image
@@ -86,8 +86,8 @@ export function Header() {
               alt="Top Shelf Moving and Junk Removal"
               width={50}
               height={50}
-              className="xl:hidden h-10"
-              style={{ width: '50px', height: 'auto', objectFit: 'contain' }}
+              className="xl:hidden h-10 flex-shrink-0"
+              style={{ width: '50px', height: 'auto', objectFit: 'contain', minWidth: '50px' }}
               sizes="50px"
             />
           </Link>
