@@ -77,7 +77,7 @@ export function Header() {
               alt="Top Shelf Moving and Junk Removal"
               width={200}
               height={60}
-              className="hidden md:block h-12"
+              className="hidden lg:block h-12"
               style={{ width: '200px', height: 'auto', objectFit: 'contain' }}
               sizes="200px"
             />
@@ -86,7 +86,7 @@ export function Header() {
               alt="Top Shelf Moving and Junk Removal"
               width={50}
               height={50}
-              className="md:hidden h-10"
+              className="lg:hidden h-10"
               style={{ width: '50px', height: 'auto', objectFit: 'contain' }}
               sizes="50px"
             />
