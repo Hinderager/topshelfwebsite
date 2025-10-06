@@ -70,14 +70,14 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 lg:pt-3 lg:px-4">
       <div className="lg:container lg:mx-auto lg:max-w-screen-2xl">
         <div className="bg-[#10477d] lg:rounded-lg border-b-2 lg:border-2 border-[#1e3a5f] shadow-xl px-2 sm:px-4 md:px-6 lg:px-8 flex items-center h-14 lg:h-20">
-          {/* Logo - Fixed size, padding compresses before switching */}
+          {/* Logo - Desktop: short at lg, long at xl+ for more nav space */}
           <Link href="/" className="flex items-center lg:flex-1 flex-1 justify-start">
             <Image
               src="/assets/Logos/white logo long.png"
               alt="Top Shelf Moving and Junk Removal"
               width={200}
               height={60}
-              className="hidden lg:block h-12"
+              className="hidden xl:block h-12"
               style={{ width: '200px', height: 'auto', objectFit: 'contain' }}
               sizes="200px"
             />
@@ -86,7 +86,7 @@ export function Header() {
               alt="Top Shelf Moving and Junk Removal"
               width={50}
               height={50}
-              className="lg:hidden h-10"
+              className="xl:hidden h-10"
               style={{ width: '50px', height: 'auto', objectFit: 'contain' }}
               sizes="50px"
             />
