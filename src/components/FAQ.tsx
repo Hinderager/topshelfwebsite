@@ -7,36 +7,32 @@ import { Button } from '@/components/ui/button'
 
 const faqs = [
   {
-    question: 'What areas do you serve?',
-    answer: 'We proudly serve the entire Treasure Valley including Boise, Meridian, Nampa, Caldwell, Eagle, Kuna, Star, Garden City, Middleton, and Hidden Springs. Contact us if you\'re outside these areas - we may still be able to help!'
+    question: 'What types of items can you haul away with your junk removal service?',
+    answer: 'We remove just about anything—furniture, appliances, yard debris, construction waste, old mattresses, hot tubs, pianos, and more. If it\'s non-hazardous and you want it gone, we can take care of it.'
   },
   {
-    question: 'How do you price your services?',
-    answer: 'Our pricing is based on the volume of items and the complexity of the job. We provide free, no-obligation quotes and transparent pricing with no hidden fees. For junk removal, we charge based on how much space your items take up in our truck. For moving services, pricing depends on the size of your move and distance.'
+    question: 'How quickly can you show up for a job?',
+    answer: 'Often within 24–48 hours! Whether it\'s a move, cleanout, or demo, we do our best to accommodate your timeline—sometimes even same-day.'
   },
   {
-    question: 'Do I need to be present during the service?',
-    answer: 'While we prefer you to be present for the initial walkthrough and approval, you don\'t need to stay for the entire job. Many of our customers provide access instructions and go about their day while we handle everything.'
+    question: 'What does your junk removal service include?',
+    answer: 'Our crew does all the heavy lifting—wherever the junk is located. We\'ll haul items from inside the home, yard, garage, attic, or basement and sweep up before we go.'
   },
   {
-    question: 'What items can\'t you take?',
-    answer: 'We cannot accept hazardous materials including paint, chemicals, asbestos, medical waste, or biohazards. We also cannot take items that are illegal to dispose of or transport. If you\'re unsure about specific items, give us a call and we\'ll let you know!'
+    question: 'Can you assist with both packing and moving?',
+    answer: 'Yes! We offer full-service moving that includes packing, loading, transport, and unloading. You can choose just what you need—whether it\'s help with packing, moving large items, or managing the whole move.'
   },
   {
-    question: 'How quickly can you schedule a service?',
-    answer: 'We often have same-day or next-day availability! Call us at (208) 593-2877 to check our current schedule. We understand that junk removal and moving needs can be urgent, and we do our best to accommodate your timeline.'
+    question: 'What areas do you serve for moving or junk removal?',
+    answer: 'We serve Metro Boise and surrounding areas throughout Southwest Idaho. If you\'re outside that area, just ask—we\'re flexible and happy to discuss.'
   },
   {
-    question: 'Do you recycle or donate items?',
-    answer: 'Yes! We\'re committed to responsible disposal. We donate usable items to local charities and recycle everything we can. Our goal is to keep as much as possible out of landfills while supporting our community.'
+    question: 'How do you charge for oversized or particularly heavy items?',
+    answer: 'Heavier or hard-to-access items—like pianos, gun safes, and hot tubs—may come with additional charges due to the labor and equipment involved. We always provide clear pricing up front.'
   },
   {
-    question: 'Are you licensed and insured?',
-    answer: 'Absolutely. Top Shelf Moving and Junk Removal is fully licensed and insured for your protection and peace of mind. Our professional crew is trained to handle your belongings with care.'
-  },
-  {
-    question: 'What payment methods do you accept?',
-    answer: 'We accept cash, all major credit cards, and digital payment methods. Payment is due upon completion of the service. We\'ll provide a detailed invoice for your records.'
+    question: 'What precautions do you take when moving or demolishing inside a home?',
+    answer: 'We use protective blankets, dollies and specialized equipment, and plan every move to avoid damage. For demolition, we keep work areas clean and safe and handle debris removal ourselves.'
   }
 ]
 

@@ -6,6 +6,118 @@
 
 ---
 
+## 🎯 MIGRATION PLAN SUMMARY
+
+### Overview
+This document maps the existing WordPress site at topshelfmovingandjunkremoval.com to guide the development of a replacement Next.js site. The goal is to replicate all pages, preserve backlinks, and eventually migrate the entire website to displace the current WordPress installation.
+
+### Migration Strategy
+
+#### Phase 1: Development (Current)
+- **Platform**: Next.js 14 with App Router
+- **Development Host**: Vercel
+- **Base Domain**: https://topshelfwebsite-nf4z.vercel.app/
+- **Goal**: Build complete site with identical URL structure to WordPress site
+
+#### Phase 2: Testing & Validation
+- **Test all pages**: Ensure 100% feature parity with WordPress site
+- **URL verification**: Confirm all URL paths match exactly
+- **SEO validation**: Meta tags, structured data, sitemaps
+- **Performance testing**: Lighthouse, Core Web Vitals
+- **Content review**: All 195+ pages migrated correctly
+
+#### Phase 3: Migration (Future)
+- **Action**: Replace WordPress site with Next.js site at topshelfmovingandjunkremoval.com
+- **Method**: Deploy Next.js site to production hosting, update DNS/hosting config
+- **Result**: topshelfmovingandjunkremoval.com now serves Next.js site instead of WordPress
+
+### Critical Requirements for Backlink Preservation
+
+#### ✅ What MUST Match:
+1. **Domain name**: topshelfmovingandjunkremoval.com (unchanged)
+2. **URL paths**: Every URL must match exactly
+   - `/junk-removal-services/` → `/junk-removal-services/`
+   - `/junk-removal-services/cleanouts/estate-cleanout/` → `/junk-removal-services/cleanouts/estate-cleanout/`
+   - `/blog/` → `/blog/`
+   - All 195+ pages must have identical paths
+3. **HTTP response codes**: All pages return 200 OK (not 301/302 redirects)
+
+#### ❌ What Doesn't Matter:
+- Hosting platform (WordPress → Next.js)
+- Backend technology (PHP → React/Node.js)
+- How the site was built (Elementor → React components)
+- Where development happens (Vercel, local, etc.)
+
+### Backlink Guarantee
+**As long as the domain stays the same AND the URL paths match exactly, ALL backlinks will continue to work seamlessly.**
+
+Backlinks point to URLs (domain + path), not to the underlying technology. When someone clicks a backlink to:
+```
+https://topshelfmovingandjunkremoval.com/junk-removal-services/cleanouts/estate-cleanout/
+```
+
+It doesn't matter if that page is served by:
+- WordPress + PHP + Elementor (current)
+- Next.js + React + Vercel (future)
+
+The URL resolves, the page loads, the backlink works. ✅
+
+### Implementation Checklist
+
+#### URL Structure Replication
+- [ ] Replicate all main pages with exact URL paths
+- [ ] Replicate all service pages (35+) with exact URL paths
+- [ ] Replicate all blog posts (150+) with exact URL paths
+- [ ] Implement dynamic routing for `/junk-removal-services/[category]/[service]/`
+- [ ] Implement blog routing for `/blog/[slug]/` and `/blog/category/[category]/`
+
+#### Content Migration
+- [ ] Homepage content
+- [ ] All service descriptions and features
+- [ ] All blog post content
+- [ ] All images optimized and migrated
+- [ ] FAQ content
+- [ ] Contact information
+- [ ] Pricing pages
+
+#### Technical Requirements
+- [ ] Meta tags (title, description, OG tags, Twitter cards)
+- [ ] Schema.org structured data (LocalBusiness, Article, etc.)
+- [ ] XML sitemap matching WordPress structure
+- [ ] Robots.txt configuration
+- [ ] 404 page for non-existent URLs
+- [ ] Proper canonical URLs
+
+#### Features & Functionality
+- [ ] Contact forms
+- [ ] Booking system integration
+- [ ] Google Reviews integration
+- [ ] Google Maps integration
+- [ ] Mobile responsiveness
+- [ ] Performance optimization (Core Web Vitals)
+
+### Migration Timeline
+1. **Build Phase**: Develop all pages on Next.js
+2. **Review Phase**: Test thoroughly on Vercel staging
+3. **Content Phase**: Migrate all copy, images, and media
+4. **QA Phase**: Comprehensive testing of all features
+5. **Go-Live Phase**: Replace WordPress with Next.js at topshelfmovingandjunkremoval.com
+
+### Post-Migration Verification
+- [ ] All 195+ URLs return 200 OK
+- [ ] No broken links
+- [ ] All backlinks resolve correctly
+- [ ] Google Search Console shows no crawl errors
+- [ ] Google Analytics tracking works
+- [ ] Contact forms submit successfully
+- [ ] Performance meets or exceeds WordPress site
+
+---
+
+## 📋 WEBSITE STRUCTURE ANALYSIS
+
+---
+
 ## Table of Contents
 1. [Main Pages](#main-pages)
 2. [Moving Services](#moving-services)
