@@ -4,28 +4,28 @@ import Image from 'next/image'
 const services = [
   {
     title: 'Moving Services',
-    description: 'At Top Shelf, our name sets the expectation, and our Boise moving services deliver it—meticulously and reliably. Our professional movers in Boise are handpicked and fully insured, distinguished not only by their skill but also their exceptional customer service. From packing and boxing to the careful disassembly and reassembly of your furniture, we wrap every detail in quality. Our proficient loading and unloading mean your belongings are in safe hands throughout Boise and the Treasure Valley, ensuring a secure transition to your next chapter.',
+    description: 'Professional Boise moving services delivering exceptional care throughout the Treasure Valley. Our fully insured movers handle packing, furniture disassembly and reassembly, loading, and unloading with precision. Trust Top Shelf for reliable residential and commercial moves across Boise, Meridian, and Eagle.',
     image: '/images/moving/residential-moves/Asset-73@4x-1.webp',
     link: '/services/moving',
     buttonText: 'Book Now',
   },
   {
     title: 'Junk Removal',
-    description: 'Our Boise junk removal service is designed to efficiently clear out unwanted items, providing relief for homes and businesses throughout the Treasure Valley in a variety of scenarios. From post-renovation debris to estate cleanouts and office space decluttering across Boise, Meridian, and Eagle, we handle a comprehensive range of items, including bulky furniture, electronic waste, and yard refuse. With Top Shelf, discarding the old becomes a hassle-free process, and making room for the new becomes an effortless experience.',
+    description: 'Fast, reliable Boise junk removal for homes and businesses across the Treasure Valley. We haul furniture, appliances, electronics, construction debris, and yard waste from Boise, Meridian, and Eagle. From post-renovation cleanup to estate cleanouts, Top Shelf makes disposal hassle-free.',
     image: '/images/junk-removal/household-junk-removal/Asset-5-50-1.webp',
     link: '/services/junk-removal',
     buttonText: 'Book Now',
   },
   {
     title: 'Cleanouts',
-    description: 'Our Boise cleanout service extends the capabilities of standard junk removal to encompass large-scale projects that require entire spaces to be thoroughly cleared. Ideal for whole home cleanouts in Boise, apartment turnovers, property management needs across the Treasure Valley, and even expansive warehouse clearances, we tackle every nook and cranny to ensure no unwanted item remains. Whether simplifying a move, preparing a Boise property for sale, or restoring order to commercial spaces, our team is equipped to handle cleanouts of any size and scope.',
+    description: 'Complete Boise cleanout services for homes, apartments, warehouses, and commercial properties throughout the Treasure Valley. Our team handles estate cleanouts, property management turnovers, foreclosures, and hoarding situations with compassion and thoroughness. Perfect for moves or property sales in Boise and surrounding areas.',
     image: '/images/junk-removal/cleanout-services/Asset-4-50-1.webp',
     link: '/services/cleanouts',
     buttonText: 'Book Now',
   },
   {
     title: 'Demolition',
-    description: 'Our Boise demolition service goes beyond simple teardown by offering safe, targeted removal of structures and features no longer serving your space. From small sheds and decks to concrete pads, patios, playgrounds and entire mobile homes throughout the Treasure Valley, we handle the end-to-end process of utility disconnections, permits, inspections and disposal. Whether you\'re prepping for a renovation in Boise, clearing land for new development, or removing outdated features, our crew is equipped to dismantle and haul away what you no longer need—efficiently and responsibly.',
+    description: 'Professional Boise demolition services for sheds, decks, concrete pads, patios, mobile homes, and complete structures across the Treasure Valley. We manage permits, utility disconnections, inspections, and responsible disposal. Whether prepping for renovation or clearing land in Boise, our crew delivers safe, efficient demolition.',
     image: '/images/demolition/Asset 74@4x.png',
     link: '/services/demolition',
     buttonText: 'Book Now',
