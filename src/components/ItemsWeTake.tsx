@@ -107,7 +107,7 @@ export function ItemsWeTake() {
       <div className="container mx-auto px-4">
         {/* Title */}
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-center mb-12 uppercase" style={{textShadow: '2px 2px 3px rgba(0,0,0,0.3), 1px 1px 2px rgba(0,0,0,0.2)'}}>
-          <span className="text-[#1e3a5f]">Main Items We Collect</span>
+          <span className="text-dark-blue">Main Items We Collect</span>
         </h2>
 
         {/* Main Content Container with Border */}
@@ -168,7 +168,7 @@ export function ItemsWeTake() {
                         </ul>
                         <Link
                           href={category.link}
-                          className="inline-block text-[#4a90e2] hover:text-[#1e3a5f] font-semibold text-base md:text-lg transition-colors"
+                          className="inline-block text-light-blue hover:text-dark-blue font-semibold text-base md:text-lg transition-colors"
                         >
                           See More..
                         </Link>

@@ -7,7 +7,7 @@ export function MapSection() {
     <section className="py-20 bg-gradient-to-b from-blue-50/30 to-slate-100/50 relative overflow-hidden">
       {/* Gradient dot pattern background */}
       <div className="absolute inset-0" style={{
-        backgroundImage: `radial-gradient(circle, #1e3a5f 3px, transparent 3px)`,
+        backgroundImage: `radial-gradient(circle, #10477d 3px, transparent 3px)`,
         backgroundSize: '16px 16px',
         maskImage: `radial-gradient(ellipse 85% 65% at 0% 0%, black, transparent 60%), radial-gradient(ellipse 85% 65% at 100% 100%, black, transparent 60%)`,
         WebkitMaskImage: `radial-gradient(ellipse 85% 65% at 0% 0%, black, transparent 60%), radial-gradient(ellipse 85% 65% at 100% 100%, black, transparent 60%)`,
@@ -19,16 +19,16 @@ export function MapSection() {
       <div className="container mx-auto px-4 relative z-10">
         {/* Title */}
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-center mb-12 uppercase" style={{textShadow: '2px 2px 3px rgba(0,0,0,0.3), 1px 1px 2px rgba(0,0,0,0.2)'}}>
-          <span className="text-[#1e3a5f]">Find Us</span>
+          <span className="text-[#10477d]">Find Us</span>
         </h2>
 
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8">
           {/* Contact Information */}
           <div className="bg-white rounded-2xl shadow-lg p-8 space-y-6">
-            <h3 className="text-2xl font-bold text-[#1e3a5f] mb-6">Contact Information</h3>
+            <h3 className="text-2xl font-bold text-[#10477d] mb-6">Contact Information</h3>
 
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#4a90e2] to-[#1e3a5f] rounded-full flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 bg-gradient-to-br from-[#0b7fb6] to-[#10477d] rounded-full flex items-center justify-center flex-shrink-0">
                 <MapPin className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -39,31 +39,31 @@ export function MapSection() {
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#4a90e2] to-[#1e3a5f] rounded-full flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 bg-gradient-to-br from-[#0b7fb6] to-[#10477d] rounded-full flex items-center justify-center flex-shrink-0">
                 <Phone className="w-6 h-6 text-white" />
               </div>
               <div>
                 <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
-                <a href="tel:2085932877" className="text-[#4a90e2] hover:text-[#1e3a5f] font-semibold text-lg transition-colors">
+                <a href="tel:2085932877" className="text-[#0b7fb6] hover:text-[#10477d] font-semibold text-lg transition-colors">
                   (208) 593-2877
                 </a>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#4a90e2] to-[#1e3a5f] rounded-full flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 bg-gradient-to-br from-[#0b7fb6] to-[#10477d] rounded-full flex items-center justify-center flex-shrink-0">
                 <Mail className="w-6 h-6 text-white" />
               </div>
               <div>
                 <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
-                <a href="mailto:info@topshelfpros.com" className="text-[#4a90e2] hover:text-[#1e3a5f] transition-colors">
+                <a href="mailto:info@topshelfpros.com" className="text-[#0b7fb6] hover:text-[#10477d] transition-colors">
                   info@topshelfpros.com
                 </a>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#4a90e2] to-[#1e3a5f] rounded-full flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 bg-gradient-to-br from-[#0b7fb6] to-[#10477d] rounded-full flex items-center justify-center flex-shrink-0">
                 <Clock className="w-6 h-6 text-white" />
               </div>
               <div>

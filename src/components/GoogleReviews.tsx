@@ -71,7 +71,7 @@ export function GoogleReviews() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center">
-            <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-[#4a90e2]"></div>
+            <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-light-blue"></div>
             <p className="mt-4 text-gray-600">Loading reviews...</p>
           </div>
         </div>
@@ -98,7 +98,7 @@ export function GoogleReviews() {
     <section className="py-20 bg-gradient-to-b from-blue-50/30 to-slate-100/50 relative overflow-hidden">
       {/* Gradient dot pattern background */}
       <div className="absolute inset-0" style={{
-        backgroundImage: `radial-gradient(circle, #1e3a5f 3px, transparent 3px)`,
+        backgroundImage: `radial-gradient(circle, #10477d 3px, transparent 3px)`,
         backgroundSize: '16px 16px',
         maskImage: `radial-gradient(ellipse 85% 65% at 0% 0%, black, transparent 60%), radial-gradient(ellipse 85% 65% at 100% 100%, black, transparent 60%)`,
         WebkitMaskImage: `radial-gradient(ellipse 85% 65% at 0% 0%, black, transparent 60%), radial-gradient(ellipse 85% 65% at 100% 100%, black, transparent 60%)`,
@@ -110,7 +110,7 @@ export function GoogleReviews() {
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-[#1e3a5f] mb-8 uppercase" style={{textShadow: '2px 2px 3px rgba(0,0,0,0.3), 1px 1px 2px rgba(0,0,0,0.2)'}}>
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-dark-blue mb-8 uppercase" style={{textShadow: '2px 2px 3px rgba(0,0,0,0.3), 1px 1px 2px rgba(0,0,0,0.2)'}}>
             What Our Customers Say
           </h2>
 
@@ -159,7 +159,7 @@ export function GoogleReviews() {
                           sizes="48px"
                         />
                       ) : (
-                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#4a90e2] to-[#1e3a5f] flex items-center justify-center text-white font-semibold text-lg">
+                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-light-blue to-dark-blue flex items-center justify-center text-white font-semibold text-lg">
                           {review.author_name.charAt(0)}
                         </div>
                       )}
@@ -196,7 +196,7 @@ export function GoogleReviews() {
                     {!expandedReviews && review.text.length > 150 && (
                       <button
                         onClick={() => setExpandedReviews(true)}
-                        className="text-[#4285f4] hover:text-[#1e3a5f] font-semibold text-sm mt-2 transition-colors"
+                        className="text-[#4285f4] hover:text-dark-blue font-semibold text-sm mt-2 transition-colors"
                       >
                         Read more
                       </button>
@@ -216,7 +216,7 @@ export function GoogleReviews() {
                 disabled={currentIndex === 0}
                 aria-label="Previous reviews"
               >
-                <ChevronLeft className="w-6 h-6 text-[#1e3a5f]" />
+                <ChevronLeft className="w-6 h-6 text-dark-blue" />
               </button>
               <button
                 onClick={nextSlide}
@@ -224,7 +224,7 @@ export function GoogleReviews() {
                 disabled={currentIndex + reviewsPerPage >= reviewsData.reviews.length}
                 aria-label="Next reviews"
               >
-                <ChevronRight className="w-6 h-6 text-[#1e3a5f]" />
+                <ChevronRight className="w-6 h-6 text-dark-blue" />
               </button>
             </>
           )}
@@ -239,7 +239,7 @@ export function GoogleReviews() {
                 onClick={() => setCurrentIndex(idx * reviewsPerPage)}
                 className={`w-2 h-2 rounded-full transition-all ${
                   Math.floor(currentIndex / reviewsPerPage) === idx
-                    ? 'bg-[#4a90e2] w-8'
+                    ? 'bg-light-blue w-8'
                     : 'bg-gray-300 hover:bg-gray-400'
                 }`}
                 aria-label={`Go to review page ${idx + 1}`}
@@ -254,7 +254,7 @@ export function GoogleReviews() {
             href="https://www.google.com/maps/place/Top+Shelf+Moving+and+Junk+Removal/@43.620604,-116.281153,17z/data=!4m8!3m7!1s0x54afb743a3dbadcf:0x49294a82f4d6f1b9!8m2!3d43.620604!4d-116.281153!9m1!1b1!16s%2Fg%2F11t1jdtjbr"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-[#4285f4] hover:text-[#1e3a5f] font-semibold text-lg transition-colors"
+            className="inline-flex items-center gap-2 text-[#4285f4] hover:text-dark-blue font-semibold text-lg transition-colors"
           >
             Read all {totalReviews} reviews on Google
             <ChevronRight className="w-5 h-5" />

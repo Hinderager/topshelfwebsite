@@ -91,6 +91,28 @@ npx shadcn-ui@latest add [component-name]
 - **cn() utility** (`src/lib/utils.ts`) for conditional class merging
 - Mobile-first responsive design
 
+### Brand Colors
+The project uses specific brand colors defined in `tailwind.config.js`:
+
+**Primary Active Colors:**
+- `light-blue`: #0b7fb6 - Used in hero "TOP SHELF" text
+- `dark-blue`: #10477d - Used in header/menu bar and borders
+- `brand-yellow` / `ub-yellow`: #FFC845 - Primary CTA button color
+
+**Brand Guide Colors:**
+- `polar-blue`: #4589A6
+- `horizon-blue`: #55AAD2
+- `evening-blue`: #1F5F8B
+- `gunmetal`: #1F201D
+- `burnished-bronze`: #4A4237
+- `cta-rose`: #F66256
+- `citrus`: #CCFF99
+- `sandstone`: #B7A99A
+- `fog`: #F4F5F6
+
+**Usage:**
+Use Tailwind utility classes like `bg-dark-blue`, `text-light-blue`, `border-brand-yellow` throughout the project.
+
 ### Supabase Integration
 Supabase credentials are stored in `.env.local` (not committed to git):
 - `SUPABASE_URL`
@@ -119,3 +141,69 @@ The project emphasizes SEO optimization:
 - Ensure semantic HTML structure
 - Optimize for local search (moving and junk removal services)
 - my repository for this project is https://github.com/Hinderager/topshelfwebsite.git
+
+## Troubleshooting
+
+### Development Server Issues
+If the Next.js development server gets stuck or crashes repeatedly due to corrupted cache:
+
+#### Quick Fix Scripts
+Two helper scripts are available in the project root:
+
+1. **PowerShell Script** (`fix-dev-server.ps1`):
+   ```powershell
+   # Run from PowerShell:
+   .\fix-dev-server.ps1
+   # Or from npm:
+   npm run dev:fix  # If configured in package.json
+   ```
+   - Provides detailed colored output
+   - Kills Node processes
+   - Clears all caches (.next, node_modules/.cache, npm cache)
+   - Sets memory allocation to 4GB
+   - Restarts development server
+
+2. **Batch Script** (`fix-dev-server.bat`):
+   ```batch
+   # Double-click the file or run from Command Prompt:
+   fix-dev-server.bat
+   ```
+   - Simple and fast execution
+   - Same cleanup operations as PowerShell script
+   - Works on any Windows system
+
+#### Manual Fix Steps
+If scripts don't work, manually execute:
+```bash
+# 1. Kill all Node processes
+taskkill /F /IM node.exe /T
+
+# 2. Remove cache folders
+rmdir /s /q .next
+rmdir /s /q node_modules\.cache
+
+# 3. Clear npm cache
+npm cache clean --force
+
+# 4. Set memory allocation
+set NODE_OPTIONS=--max-old-space-size=4096
+
+# 5. Restart development server
+npm run dev
+```
+
+#### Prevention Tips
+- Always stop the server properly with `Ctrl+C` instead of closing the terminal
+- Clear cache periodically if you notice slowdowns
+- Consider adding these scripts to package.json:
+  ```json
+  "scripts": {
+    "dev:clean": "rmdir /s /q .next 2>nul && npm run dev",
+    "dev:fix": "powershell -ExecutionPolicy Bypass -File fix-dev-server.ps1"
+  }
+  ```
+
+### Common Issues
+- **Port 3000 already in use**: Kill Node processes using the fix scripts
+- **Cache corruption**: Use `fix-dev-server.bat` or `fix-dev-server.ps1`
+- **Memory issues**: Increase NODE_OPTIONS memory allocation (default: 4096MB)

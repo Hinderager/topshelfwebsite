@@ -50,7 +50,7 @@ export default function Home() {
         <HeroSection />
         <SectionDivider />
         <ServicesGrid />
-        {/* <ServicesShowcase /> */}
+        <ServicesShowcase />
         <TrustSection />
         <Suspense fallback={<ReviewsSkeleton />}>
           <GoogleReviews />

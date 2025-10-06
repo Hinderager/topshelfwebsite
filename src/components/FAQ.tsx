@@ -50,7 +50,7 @@ export function FAQ() {
       <div className="container mx-auto px-4">
         {/* Title */}
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-center mb-12 uppercase" style={{textShadow: '2px 2px 3px rgba(0,0,0,0.3), 1px 1px 2px rgba(0,0,0,0.2)'}}>
-          <span className="text-[#1e3a5f]">Frequently Asked Questions</span>
+          <span className="text-dark-blue">Frequently Asked Questions</span>
         </h2>
 
         {/* FAQ Accordion */}
@@ -62,11 +62,11 @@ export function FAQ() {
                 onClick={() => toggleFAQ(index)}
                 className="w-full flex items-center justify-between px-6 py-6 text-left transition-colors hover:bg-gray-50"
               >
-                <span className="text-xl md:text-2xl font-bold text-[#1e3a5f] pr-4">
+                <span className="text-xl md:text-2xl font-bold text-dark-blue pr-4">
                   {faq.question}
                 </span>
                 <ChevronDown
-                  className={`w-6 h-6 text-[#1e3a5f] flex-shrink-0 transition-transform duration-300 ${
+                  className={`w-6 h-6 text-dark-blue flex-shrink-0 transition-transform duration-300 ${
                     activeIndex === index ? 'rotate-180' : ''
                   }`}
                 />

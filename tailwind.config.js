@@ -35,6 +35,10 @@ module.exports = {
         'citrus': '#CCFF99',
         'sandstone': '#B7A99A',
         'fog': '#F4F5F6',
+        // Active Brand Colors (extracted from design)
+        'light-blue': '#0b7fb6', // Used in hero "TOP SHELF" text
+        'dark-blue': '#10477d', // Used in header/menu bar
+        'brand-yellow': '#FFC845', // Primary CTA button color (same as ub-yellow)
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

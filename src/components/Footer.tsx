@@ -32,7 +32,7 @@ const serviceAreaLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-[#1e3a5f] text-white">
+    <footer className="bg-dark-blue text-white">
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-16">
         {/* Newsletter Section */}
@@ -54,7 +54,7 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company */}
           <div>
-            <h4 className="text-xl font-bold mb-4 text-[#4a90e2]">Company</h4>
+            <h4 className="text-xl font-bold mb-4 text-light-blue">Company</h4>
             <ul className="space-y-2">
               {companyLinks.map((link) => (
                 <li key={link.name}>
@@ -71,7 +71,7 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-xl font-bold mb-4 text-[#4a90e2]">Services</h4>
+            <h4 className="text-xl font-bold mb-4 text-light-blue">Services</h4>
             <ul className="space-y-2">
               {serviceLinks.map((link) => (
                 <li key={link.name}>
@@ -88,7 +88,7 @@ export function Footer() {
 
           {/* Service Areas */}
           <div>
-            <h4 className="text-xl font-bold mb-4 text-[#4a90e2]">Service Areas</h4>
+            <h4 className="text-xl font-bold mb-4 text-light-blue">Service Areas</h4>
             <ul className="space-y-2">
               {serviceAreaLinks.slice(0, 6).map((link) => (
                 <li key={link.name}>
@@ -105,7 +105,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-xl font-bold mb-4 text-[#4a90e2]">Contact</h4>
+            <h4 className="text-xl font-bold mb-4 text-light-blue">Contact</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-[#ff6b35] flex-shrink-0 mt-1" />
