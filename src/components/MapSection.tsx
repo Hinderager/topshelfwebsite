@@ -45,8 +45,7 @@ export function MapSection() {
               <div>
                 <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
                 <a href="tel:2085932877" className="text-[#0b7fb6] hover:text-[#10477d] font-semibold text-lg transition-colors">
-                  <span className="md:hidden">Call Now</span>
-                  <span className="hidden md:inline">(208) 593-2877</span>
+                  (208) 593-2877
                 </a>
               </div>
             </div>
