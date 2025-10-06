@@ -1,13 +1,14 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { Button } from '@/components/ui/button'
 
 const services = [
   {
     title: 'Moving Services',
     description: 'Professional Boise moving services delivering exceptional care throughout the Treasure Valley. Our fully insured movers handle packing, furniture disassembly and reassembly, loading, and unloading with precision. Trust Top Shelf for reliable residential and commercial moves across Boise, Meridian, and Eagle.',
     image: '/images/moving/residential-moves/Asset-73@4x-1.webp',
-    link: '/services/moving',
-    buttonText: 'Book Now',
+    link: 'tel:2085932877',
+    buttonText: 'Call Now',
   },
   {
     title: 'Junk Removal',
@@ -20,8 +21,8 @@ const services = [
     title: 'Cleanouts',
     description: 'Complete Boise cleanout services for homes, apartments, warehouses, and commercial properties throughout the Treasure Valley. Our team handles estate cleanouts, property management turnovers, foreclosures, and hoarding situations with compassion and thoroughness. Perfect for moves or property sales in Boise and surrounding areas.',
     image: '/images/junk-removal/cleanout-services/Asset-4-50-1.webp',
-    link: '/services/cleanouts',
-    buttonText: 'Book Now',
+    link: 'tel:2085932877',
+    buttonText: 'Call Now',
   },
   {
     title: 'Demolition',
@@ -82,15 +83,41 @@ export function ServicesShowcase() {
                 <p className="text-gray-700 leading-relaxed text-lg mb-8">
                   {service.description}
                 </p>
-                <Link
-                  href={service.link}
-                  className="inline-block bg-[#FFC845] hover:bg-[#e5b13d] text-black font-bold px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 uppercase tracking-wide"
-                >
-                  {service.buttonText}
-                </Link>
+                {service.link.startsWith('tel:') ? (
+                  <a
+                    href={service.link}
+                    className="inline-block bg-[#FFC845] hover:bg-[#e5b13d] text-black font-bold px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 uppercase tracking-wide"
+                  >
+                    {service.buttonText}
+                  </a>
+                ) : (
+                  <Link
+                    href={service.link}
+                    className="inline-block bg-[#FFC845] hover:bg-[#e5b13d] text-black font-bold px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 uppercase tracking-wide"
+                  >
+                    {service.buttonText}
+                  </Link>
+                )}
               </div>
             </div>
           ))}
+        </div>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-row gap-4 justify-center mt-16">
+          <Button asChild size="lg" className="bg-ub-yellow hover:bg-ub-yellow/90 text-black font-bold text-lg px-10 py-6 rounded-lg uppercase border-4 border-ub-yellow">
+            <Link href="/quote">Book Now</Link>
+          </Button>
+          <Button
+            asChild
+            size="lg"
+            className="bg-white hover:bg-white/90 text-black font-bold text-lg px-10 py-6 rounded-lg border-4 border-ub-yellow uppercase"
+          >
+            <a href="tel:2085932877">
+              <span className="md:hidden">Call Now</span>
+              <span className="hidden md:inline">(208) 593-2877</span>
+            </a>
+          </Button>
         </div>
       </div>
     </section>

@@ -1,7 +1,9 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { ChevronDown } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
 const faqs = [
   {
@@ -86,6 +88,23 @@ export function FAQ() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-row gap-4 justify-center mt-12">
+          <Button asChild size="lg" className="bg-ub-yellow hover:bg-ub-yellow/90 text-black font-bold text-lg px-10 py-6 rounded-lg uppercase border-4 border-ub-yellow">
+            <Link href="/quote">Book Now</Link>
+          </Button>
+          <Button
+            asChild
+            size="lg"
+            className="bg-white hover:bg-white/90 text-black font-bold text-lg px-10 py-6 rounded-lg border-4 border-ub-yellow uppercase"
+          >
+            <a href="tel:2085932877">
+              <span className="md:hidden">Call Now</span>
+              <span className="hidden md:inline">(208) 593-2877</span>
+            </a>
+          </Button>
         </div>
       </div>
     </section>
