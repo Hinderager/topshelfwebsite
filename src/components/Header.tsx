@@ -91,7 +91,7 @@ export function Header() {
               sizes="(min-width: 1024px) and (max-width: 1279px) 150px, 0px"
             />
             <Image
-              src="/logos/full-white.webp"
+              src="/assets/Logos/white logo short.png"
               alt="Top Shelf Moving and Junk Removal"
               width={50}
               height={50}
